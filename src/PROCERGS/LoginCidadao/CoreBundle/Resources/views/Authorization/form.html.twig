@@ -1,7 +1,5 @@
-<form id="authorization_form" action="{{ path('fos_oauth_server_authorize') }}" method="POST" class="fos_oauth_server_authorize" {{ form_enctype(form) }}>
-    <h3>{% trans %}Authorize Application{% endtrans %}</h3>
-
-    <input type="hidden" name="accepted" value="{{ 'authorize.accept'|trans({}, 'FOSOAuthServerBundle') }}" class="btn btn-success" />
+<form id="authorization_form" action="{{ path('fos_oauth_server_authorize') }}" method="POST" {{ form_enctype(form) }}>
+    <input type="hidden" name="accepted" value="{{ 'authorize.accept'|trans({}, 'FOSOAuthServerBundle') }}" />
     <script type="text/javascript">
       document.addEventListener("DOMContentLoaded", function(event) { 
         document.getElementById("authorization_form").submit();
