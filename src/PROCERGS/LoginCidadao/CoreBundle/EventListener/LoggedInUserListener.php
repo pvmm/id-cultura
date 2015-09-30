@@ -75,6 +75,8 @@ class LoggedInUserListener
                     $url = $this->router->generate('lc_dashboard');
                 }
                 $event->setResponse(new RedirectResponse($url));
+	    } else if ($_route == 'fos_oauth_server_authorize'){
+		return;
             } else {
                 $this->checkUnconfirmedEmail();
             }
