@@ -4,47 +4,200 @@
     {% set form1 = lc_getForm() %}
     {% set form = lc_getFormFactory() %}
 
+ <!-- Header -->
+  <header id="header" class="big with-separation-bottom">
 
-    <div class="row lc-main-title">
-        <div class="col-12 text-center">
-            <h1>{% trans %}Citizen's Login{% endtrans %}</h1>
-            <h2 class="hidden-xs">{% trans %}One account. The entire Government.{% endtrans %}</h2>
+ <!-- POINTER ANIMACAO DO FUNDO -->
+                        <canvas id="header-canvas"></canvas>
+            <div id="shade"></div>
+            <!-- PARA COLOCAR VIDEO NO FUNDO - CAMPANHA -->
+            <div id="header-video"
+                            data-vide-bg="mp4: videos/video0, ogv: images/video/video2, webm: images/video/video3, poster: images/video/poster" data-vide-options="posterType: jpg, loop: true, muted: true, position: 50% 50%">
+                        </div>
+
+    <div class="container">
+      <div class="row t-container">
+        <div class="texture">
+          <img src="bundles/procergslogincidadaocore/img/background.png" alt="">
         </div>
+        <!-- Logo -->
+        <div class="span3">
+          <div class="logo">
+            <a href="#"><img src="bundles/procergslogincidadaocore/img/logo-header.png" alt=""></a>
+          </div>
+        </div>
+    <div class="span9">
+          <div class="row space90"></div>
+        </div>
+
+
+        <div class="span8">
+          <div class="row">
+
+            <div class="span6 offset2 redes-sociais">
+            <!-- QUERO ME CADASTRAR -->
+            <h1>Quero me <strong>Cadastrar</strong></h1>
+              <div class="head-info">
+               <form class="form-main" name="ajax-form" id="ajax-form" action="#" method="post">
+            <div id="ajaxsuccess">E-mail was successfully sent.</div>
+            <div class="error" id="err-name">Please enter name</div>
+            <input name="Email" id="Email" type="text" value="Email" onfocus="if(this.value == 'Email') this.value='';" onblur="if(this.value == '') this.value='Email';">
+
+            <div class="error" id="err-email">Please enter e-mail</div>
+                        <div class="error" id="err-emailvld">E-mail is not a valid format</div>
+            <input  name="Senha" id="Senha" type="text" value="Senha" onfocus="if(this.value == 'Senha') this.value='';" onblur="if(this.value == '') this.value='Senha';">
+
+            <div class="error" id="err-message">Please enter message</div>
+            <input  name="Telefone" id="Telefone" type="text" value="Telefone" onfocus="if(this.value == 'Telefone') this.value='';" onblur="if(this.value == '') this.value='Telefone';"><br>
+            <p>Ao clicar em criar conta, você concorda com a Privacidade e Termos de uso do serviço, incluindo nosso uso de cookies.</p>
+            <button id="send" class="btn f-right">Criar conta <i class="icon-ok"></i></button>
+
+            <div>
+                <div class="error" id="err-form">There was a problem validating the form please check!</div>
+                <div class="error" id="err-timedout">The connection to the server timed out!</div>
+                <div class="error" id="err-state"></div>
+            </div>
+        <!-- OUTRAS CONTAS DE ACESSO -->
+
+            <h1>Use contas de <strong>outros serviços</strong></h1>
+                                <p style="color:#666">Se preferir, é possível usar os seguintes serviços para acessar ou criar sua conta:</p>
+                                        <a href="#"><img src="bundles/procergslogincidadaocore/img/facebook.png" width="90px" height="90px"></a>
+                                        <a href="#"><img src="bundles/procergslogincidadaocore/img/google.png" width="90px" height="90px"></a>
+                                <a href="#"src="bundles/procergslogincidadaocore/img/twitter.png" width="90px" height="90px"></a>
+          </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="space60"></div>
+
+      <div class="row">
+        <div class="span12">
+          <!-- USO PARA OUTRAS INFOR -->
+
+          <!-- FIM - USO PARA OUTRAS INFOR -->
+        </div>
+      </div>
+  </div>
+
+
+  </header>
+
+  <!-- Content -->
+  <div id="content">
+    <div class="container">
+      <div class="row">
+        <div class="span12">
+          <h2>Informações �~Zteis</h2>
+                        <p style="color:#FFF">O ID cultura tem o objetivo de promover a integração, o cadastro e a autenticação do cidadão junto �| s ferramentas e os Serviços Digitais do Governo, facilitando o relacionamento da pessoa física com o Governo do Estado e abrindo caminho para a adoção de uma Identidade Digital para as cidadãs e os cidadãos.<br><br>
+
+A iniciativa promove a desburocratização e a integração de sistemas, diminui a possibilidade de fraudes e padroniza o acesso �| s bases de dados do Estado, ao passo que permite o registro automatizado e o acompanhamento sistemático da interação dos cidadãos com os serviços digitais geridos pela Administração Estadual.</p>
+          <div class="row">
+            <img src="bundles/procergslogincidadaocore/img/background-footer.png" alt="">
+          <!-- Service Container --><!-- Service Container End -->
+          </div>
+        </div>
+
+        <div class="span12">
+          <h2>Como criar uma Conta do ID cultura?</h2>
+        </div>
+        <div class="span8">
+
+          <div class="btn h-button"><h3>Entrar no ID cultura</h3></div>
+          <img src="bundles/procergslogincidadaocore/img/devices.png" alt="">
+        </div>
+        <div class="span4">
+          <div class="ic-1"></div>
+          <div class="title-1"><h4>Você pode criar sua conta no ID cultura utilizando uma das seguintes formas:</h4></div>
+          <!-- List -->
+          <div class="text-1">
+            <ul class="list-b">
+              <!-- List Items -->
+              <li style="color:#FFF"><i class="icon-ok"></i> Informando seu Email e uma senha;</li>
+              <li style="color:#FFF"><i class="icon-ok"></i> Utilizando seu Login do Facebook;</li>
+              <li style="color:#FFF"><i class="icon-ok"></i> Utilizando seu Login do Twitter.</li>
+
+            </ul>
+          </div>
+          <!-- List End -->
+        </div>
+
+      </div>
+
+      <div class="space40"></div>
+
+      <!-- Our Clients -->
+      <div class="row">
+        <div class="span12">
+          <h3>Você pode criar uma Conta do ID cultura na página inicial do ID cultura ou clicando em Cadastre-se no sistema, na página de login. Você pode usar sua Conta do ID cultura com todos os serviços da Cultura.</h3>
+        </div>
+      </div>
+      <!-- Our Clients End -->
+
+      <div class="space50"></div>
+
     </div>
+  </div>
+  <!-- Content End -->
 
+ <!-- Footer -->
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="span12 pos-r">
+          <h2>Quais os meus benefícios com o ID cultura?</h2>
+          <div class="texture-footer">
+          </div>
+        </div>
+      </div>
 
-    <div class="container lc-box-group">
-
-        <div class="row">
-            <div class="col-md-5">
-                <div class="box box-register">
-                    {{ include('PROCERGSLoginCidadaoCoreBundle::common.register.html.twig') }}
-                </div>
-            </div>
-
-            <div class="col-md-2"></div>
-
-            <div class="col-md-5">
-                <div class="box">
-                    {{ include('PROCERGSLoginCidadaoCoreBundle::common.login.html.twig') }}
-                </div>
-            </div>
+      <div class="row">
+        <div class="span5">
+        <p>
+        1 - Canal de diálogo simples e direto com o Governo.<br>
+                2 - Desburocratização dos serviços digitais, uma só conta para todos os serviços.<br>
+                3 - Ação Social Colaborativa e Digital.
+        </p>
+        <h2>Fale Conosco</h2>
+        <div>
+          <h3>Conselho Nacional de Política Cultural.</h3>
+          Endereço: Esplanada dos Ministérios, Bloco B, 3º andar, CEP 70068-900, <br>
+          Brasília - Distrito Federal, <br>Telefone: (61) 2024-2336/2335/2186
         </div>
 
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <div class="box connect-box lc-box clearfix">
-                    <h3>{% trans %}Use accounts from other services{% endtrans %}</h3>
-                    <p>{% trans %}If you prefer, it's possible to use other services to login or create your account.{% endtrans %}</p>
-                    <div class="row">
-                        <div class="col-md-4 text-center"><a class="connect facebook" data-href="{{ path("lc_link_facebook") }}">Facebook</a></div>
-                        <div class="col-md-4 text-center"><a class="connect twitter" href="{{ path('hwi_oauth_service_redirect', {'service': 'twitter'}) }}">Twitter</a></div>
-                        <div class="col-md-4 text-center"><a class="connect google" href="{{ path('hwi_oauth_service_redirect', {'service': 'google'}) }}">Google</a></div>
-                    </div>
-                </div>
-            </div>
+
+        <div class="span3 offset3">
+
+          <div class="space80"></div>
+
+          <div class="space70"></div>
+
+
+
         </div>
-    </div>
+      </div>
+     <div class="row space50"></div>
+      <div class="row">
+        <div class="span6">
+          <div class="logo-footer">
+            <a href="#"><img src="bundles/procergslogincidadaocore/img/logo-footer.png" alt=""></a>
+
+            Integrando serviços digitais.
+         </div>
+       </div>
+       <div class="span6 right">
+         <br>
+         <!-- USO PARA INFORMACOES ADICIONAIS -->
+       </div>
+     </div>
+
+   </div>
+ </footer>
+ <div id="footer-brasil"></div>
+ <!-- Footer End -->
+
 
 
 {% endblock %}

@@ -38,18 +38,10 @@ html {
 }
 
 
-body {
-    padding-top: 50px;
-}
-
 #lc-navbar {
-    position: fixed !important;
     width: 100%;
     z-index: 9999;
     top: 0px;
-
-    -webkit-box-shadow: 0 0px 28px -2px #000;
-    box-shadow: 0 0px 28px -2px #000;
 }
 
 @media (max-width: 767px) {
