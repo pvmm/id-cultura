@@ -3,8 +3,8 @@
 /*	Responsive media queries */
 /* --------------------------------------------------------	*/
 
-@import url("../bootstrap/2.3.1/css/bootstrap.css");
-@import url("../bootstrap/2.3.1/css/bootstrap-responsive.min.css");
+@import url("../bootstrap.min.css");
+@import url("../bootstrap-responsive.min.css");
 
 /* --------------------------------------------------------	*/
 /*	Base */
@@ -49,12 +49,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1, h2 {
-  font-size:42px;
+  font-size:32px;
   padding: 20px 0 10px 0;
 }
 
 h1 {
-  color:#3b3b3b;
+  color:#c6c6c6;
 }
 
 h2 {
@@ -221,7 +221,7 @@ a:hover {
 .acesso {
     position:relative;
     /*transition: .5s ease;*/
-    top: 4px;
+    top: 15px;
     left: 420px;
     right: -420px;
     bottom: -191px;
@@ -280,7 +280,7 @@ header {
 
 .logo {
   position:relative;
-  margin-top:70px;
+  margin-top:10px;
 }
 
 .head-info {
@@ -430,7 +430,12 @@ header {
 
 #content {
   position:relative;
-  background:#025851;
+  background:#FFFFFF;
+}
+
+#content2 {
+  position:relative;
+  background:#075679;
 }
 
 /* --------------------------------------------------------	*/
@@ -653,8 +658,8 @@ header {
 .btn {
   color:#fff;
   background:#EDB636;
-  height:48px;
-  line-height:48px;
+  height:38px;
+  line-height:38px;
   padding:0px 22px;
   text-shadow:none;
   border-radius:2px;
@@ -836,9 +841,9 @@ table a:hover{
 
 .form-main input, .form-main textarea {
   position:relative;
-  height:20px;
+  height:9px;
   width:95%;
-  padding:16px 12px 14px 12px; 
+  padding:10px 12px 14px 12px; 
   margin-top:10px;
   color:#979797;
   background:#464646;
@@ -967,7 +972,7 @@ table a:hover{
 /* --------------------------------------------------------	*/
 
 #footer-brasil {
-   background: none repeat scroll 0% 0% #00420c;
+   background: none repeat scroll 0% 0% #F7931E;
    padding: 1em 0px;
    max-width: 100%;
 }
@@ -1338,6 +1343,13 @@ table a:hover{
 
 .sn2 {
 	background: url(../img/social-networks-2.png) no-repeat top left; 
+}
+
+.container-fluid {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 
 /* Normal */

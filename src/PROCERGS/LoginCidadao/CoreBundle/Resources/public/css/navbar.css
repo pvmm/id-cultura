@@ -68,7 +68,7 @@
 }
 
 #lc-navbar {
-    background: #025851;
+    background: #025851 !important;
     border: none;
     font-family: 'Open Sans', arial;
     min-height: 50px;
