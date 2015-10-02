@@ -1,3 +1,12 @@
+<!-- BARRA DO GOVERNO FEDERAL -->
+<div id="barra-brasil" style="background:#7F7F7F; height: 20px; padding:0 0 0 10px;display:block;"> 
+	<ul id="menu-barra-temp" style="list-style:none;">
+		<li style="display:inline; float:left;padding-right:10px; margin-right:10px; border-right:1px solid #EDEDED"><a href="http://brasil.gov.br" style="font-family:sans,sans-serif; text-decoration:none; color:white;">Portal do Governo Brasileiro</a></li> 
+		<li><a style="font-family:sans,sans-serif; text-decoration:none; color:white;" href="http://epwg.governoeletronico.gov.br/barra/atualize.html">Atualize sua Barra de Governo</a></li>
+	</ul>
+</div>
+<!-- FIM DA BARRA GOV -->
+
 <div class="navbar navbar-inverse" role="navigation" id="lc-navbar">
     <div class="container">
         <ul id="lc-navbar-ul">
@@ -12,15 +21,17 @@
             </li>
         {% endif %}
 
-            <li class="brand">
-                <a href="{{ url('lc_home') }}" class="btn">
-                    {% trans %}Login Cidadão{% endtrans %}
-                </a>
-            </li>
-
         {% if app.user == null %}
+            <!-- deslogado - tela de login -->
             <li class="pull-right">
-                {% if app.request.attributes.get('_route') != 'fos_user_security_login' %}
+              {% if app.request.attributes.get('_route') != 'fos_user_security_login' %}
+              <button id="send" class="btn acesso"><i class="icon-user"></i> Já tenho cadastro </button>
+                    <a href="{{ url("fos_user_security_login") }}" class="btn btn-login btn-success navbar-btn">{{ 'Log in' | trans }}</a>
+                {% endif %}
+            </li>
+	    
+            <li class="pull-right">
+              {% if app.request.attributes.get('_route') != 'fos_user_security_login' %}
                     <a href="{{ url("fos_user_security_login") }}" class="btn btn-login btn-success navbar-btn">{{ 'Log in' | trans }}</a>
                 {% endif %}
             </li>
