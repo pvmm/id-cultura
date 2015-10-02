@@ -33,30 +33,7 @@
 
         <div class="span8">
           <div class="row">
-
-            <div class="span6 offset2 redes-sociais">
-            <!-- QUERO ME CADASTRAR -->
-            <h1>Quero me <strong>Cadastrar</strong></h1>
-              <div class="head-info">
-               <form class="form-main" name="ajax-form" id="ajax-form" action="#" method="post">
-            <div id="ajaxsuccess">E-mail was successfully sent.</div>
-            <div class="error" id="err-name">Please enter name</div>
-            <input name="Email" id="Email" type="text" value="Email" onfocus="if(this.value == 'Email') this.value='';" onblur="if(this.value == '') this.value='Email';">
-
-            <div class="error" id="err-email">Please enter e-mail</div>
-                        <div class="error" id="err-emailvld">E-mail is not a valid format</div>
-            <input  name="Senha" id="Senha" type="text" value="Senha" onfocus="if(this.value == 'Senha') this.value='';" onblur="if(this.value == '') this.value='Senha';">
-
-            <div class="error" id="err-message">Please enter message</div>
-            <input  name="Telefone" id="Telefone" type="text" value="Telefone" onfocus="if(this.value == 'Telefone') this.value='';" onblur="if(this.value == '') this.value='Telefone';"><br>
-            <p>Ao clicar em criar conta, você concorda com a Privacidade e Termos de uso do serviço, incluindo nosso uso de cookies.</p>
-            <button id="send" class="btn f-right">Criar conta <i class="icon-ok"></i></button>
-
-            <div>
-                <div class="error" id="err-form">There was a problem validating the form please check!</div>
-                <div class="error" id="err-timedout">The connection to the server timed out!</div>
-                <div class="error" id="err-state"></div>
-            </div>
+             {{ include('PROCERGSLoginCidadaoCoreBundle::common.register.html.twig') }}
         <!-- OUTRAS CONTAS DE ACESSO -->
 
             <h1>Use contas de <strong>outros serviços</strong></h1>
@@ -64,8 +41,6 @@
                                         <a href="#"><img src="bundles/procergslogincidadaocore/img/facebook.png" width="90px" height="90px"></a>
                                         <a href="#"><img src="bundles/procergslogincidadaocore/img/google.png" width="90px" height="90px"></a>
                                 <a href="#"src="bundles/procergslogincidadaocore/img/twitter.png" width="90px" height="90px"></a>
-          </form>
-              </div>
             </div>
           </div>
         </div>
