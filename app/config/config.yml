@@ -75,6 +75,8 @@ assetic:
           - '@PROCERGSLoginCidadaoCoreBundle/Resources/public/js/jquery.infinitescroll.local.js'
           - '@PROCERGSLoginCidadaoCoreBundle/Resources/public/js/jquery.visible.min.js'
           - '@PROCERGSLoginCidadaoCoreBundle/Resources/public/js/general.js'
+          - '@PROCERGSLoginCidadaoCoreBundle/Resources/public/js/plugins.js'
+          - '@PROCERGSLoginCidadaoCoreBundle/Resources/public/js/functions.js'
       lc_base_css:
         inputs:
           - 'bundles/procergslogincidadaocore/bootstrap/3.3.1/css/bootstrap.min.css'
@@ -87,6 +89,12 @@ assetic:
           - 'bundles/procergslogincidadaocore/css/custom.recaptcha.css'
           - 'bundles/procergslogincidadaocore/css/list.buttons.css'
           - 'bundles/procergslogincidadaocore/css/notification.css'
+          - 'bundles/procergslogincidadaocore/css/idcultura-options.css'
+          - 'bundles/procergslogincidadaocore/css/idcultura-responsive.css'
+          - 'bundles/procergslogincidadaocore/css/idcultura-styleAnimacao.css'
+          - 'bundles/procergslogincidadaocore/css/idcultura-styles.css'
+          - 'bundles/procergslogincidadaocore/css/font-awesome/font-awesome.css'
+          - 'bundles/procergslogincidadaocore/css/font-awesome/font-awesome-ie7.min.css'
       lc_logged_css:
         inputs:
           - '@lc_base_css'
