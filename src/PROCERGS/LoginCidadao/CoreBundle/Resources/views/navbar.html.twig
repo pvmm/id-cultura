@@ -1,12 +1,13 @@
-<!-- BARRA DO GOVERNO FEDERAL -->
-<div id="barra-brasil" style="background:#7F7F7F; height: 20px; padding:0 0 0 10px;display:block;"> 
+<!-- BARRA DO GOVERNO FEDERAL
+<div id="barra-brasil" style="background:#7F7F7F; height: 20px; padding:0 0 0 10px;display:block;position: fixed;">
        <ul id="menu-barra-temp" style="list-style:none;">
-               <li style="display:inline; float:left;padding-right:10px; margin-right:10px; border-right:1px solid #EDEDED"><a href="http://brasil.gov.br" style="font-family:sans,sans-serif; text-decoration:none; color:white;">Portal do Governo Brasileiro</a></li> 
-               <li><a style="font-family:sans,sans-serif; text-decoration:none; color:white;" href="http://epwg.governoeletronico.gov.br/barra/atualize.html">Atualize sua Barra de Governo</a></li>
+               <li style="display:inline; float:left;padding-right:10px; margin-right:10px; border-right:1px solid #EDEDED"><a href="http://brasil.gov.br" style="font-family:sa
+ns,sans-serif; text-decoration:none; color:white;">Portal do Governo Brasileiro</a></li>
+               <li><a style="font-family:sans,sans-serif; text-decoration:none; color:white;" href="http://epwg.governoeletronico.gov.br/barra/atualize.html">Atualize sua Barra
+ de Governo</a></li>
        </ul>
 </div>
-<!-- FIM DA BARRA GOV -->
-
+FIM DA BARRA GOV -->
 <div class="navbar navbar-inverse" role="navigation" id="lc-navbar">
     <div class="container">
         <ul id="lc-navbar-ul">
@@ -21,11 +22,18 @@
             </li>
         {% endif %}
 
+            <li>
+                <a href="{{ url('lc_home') }}">
+                    ID da Cultura
+                </a>
+            </li>
+
         {% if app.user == null %}
-              {% if app.request.attributes.get('_route') != 'fos_user_security_login' %}
-              <a id="send" class="btn"><i class="icon-user"></i> Já tenho cadatro</a>
+            <li class="pull-right">
+                {% if app.request.attributes.get('_route') != 'fos_user_security_login' %}
+                    <a href="{{ url("fos_user_security_login") }}" class="btn btn-login btn-success navbar-btn">{{ 'Log in' | trans }}</a>
                 {% endif %}
-    
+            </li>
         {% else %}
 
             {% if is_granted('ROLE_ALLOWED_TO_SWITCH') or is_granted('ROLE_PREVIOUS_ADMIN') %}
@@ -131,3 +139,4 @@
     });
 </script>
 {% endif %}
+<!-- <script defer src="http://barra.brasil.gov.br/barra.js" type="text/javascript"></script> -->
