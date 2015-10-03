@@ -3,8 +3,8 @@
 /*	Responsive media queries */
 /* --------------------------------------------------------	*/
 
-@import url("../bootstrap.min.css");
-@import url("../bootstrap-responsive.min.css");
+@import url("bootstrap.min.css");
+@import url("bootstrap-responsive.min.css");
 
 /* --------------------------------------------------------	*/
 /*	Base */
@@ -315,7 +315,7 @@ header {
   font-size:14px;
   height:53px;
   position:relative;
-  float:right !important;
+  float:left !important;
 }
 
 .navbar .nav-responsive {
@@ -428,9 +428,10 @@ header {
 /*  Content  */
 /* --------------------------------------------------------	*/
 
-#content {
+#menu-topo {
   position:relative;
   background:#FFFFFF;
+  height: 66px;
 }
 
 #content2 {
@@ -841,7 +842,7 @@ table a:hover{
 
 .form-main input, .form-main textarea {
   position:relative;
-  height:9px;
+  height:15px;
   width:95%;
   padding:10px 12px 14px 12px; 
   margin-top:10px;
@@ -1345,13 +1346,6 @@ table a:hover{
 	background: url(../img/social-networks-2.png) no-repeat top left; 
 }
 
-.container-fluid {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-}
-
 /* Normal */
 .social-network.aim{ background-position: 0 0}
 .social-network.amazon{ background-position: -24px 0}
@@ -1453,3 +1447,7 @@ table a:hover{
 .social-network.yelp:hover,.active .social-network.yelp{ background-position: -1104px -24px}
 .social-network.youtube:hover,.active .social-network.youtube{ background-position: -1128px -24px}
 .social-network.zerply:hover,.active .social-network.zerply{ background-position: -1152px -24px}
+
+#entrar-no-sistema {
+  display: none;
+}

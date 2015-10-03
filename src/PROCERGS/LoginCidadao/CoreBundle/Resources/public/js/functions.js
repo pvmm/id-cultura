@@ -8,6 +8,16 @@ if ( navigator.appVersion.indexOf("Mac")!=-1 )
 // When DOM is fully loaded
 jQuery(document).ready(function($) {
 
+/* --------------------------------------------------------
+         Toggle dos formularios de registro e login
+   --------------------------------------------------------     */
+        $('#send').click(function() {
+            $('#registrar').fadeOut();
+            $('#entrar-no-sistema').fadeIn();
+        });
+
+
+
 /* --------------------------------------------------------	
 	 External Links
    --------------------------------------------------------	*/	

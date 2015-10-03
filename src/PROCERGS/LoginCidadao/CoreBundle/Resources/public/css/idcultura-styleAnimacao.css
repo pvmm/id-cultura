@@ -18,7 +18,7 @@ button:focus{outline:0;}
 }
 .with-separation-bottom:after{
 	content: "";
-	background-image: url("images/breaker.svg");
+	background-image: url("../images/breaker.svg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center bottom;
@@ -31,7 +31,7 @@ button:focus{outline:0;}
 }
 .with-separation-top:before{
 	content: "";
-	background-image: url("images/breaker-bottom.svg");
+	background-image: url("../images/breaker-bottom.svg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center -40px;
@@ -401,7 +401,7 @@ a#logo-navigation:hover{
 }
 #navigation.navigation-fixed:before{
 	content: "";
-	background-image: url("images/breaker-bottom.svg");
+	background-image: url("../images/breaker-bottom.svg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center top;

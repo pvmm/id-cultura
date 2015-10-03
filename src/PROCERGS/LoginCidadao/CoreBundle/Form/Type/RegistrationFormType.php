@@ -12,8 +12,7 @@ class RegistrationFormType extends BaseType
     {
         $builder
             ->add('email', 'email', array('required' => true, 'label' => 'form.email', 'translation_domain' => 'FOSUserBundle'))
-            ->add('plainPassword', 'password', array('required' => true, 'label' => 'form.password', 'translation_domain' => 'FOSUserBundle'))
-            ->add('mobile', null, array('required' => false, 'label' => 'form.mobile', 'translation_domain' => 'FOSUserBundle'));
+            ->add('plainPassword', 'password', array('required' => true, 'label' => 'form.password', 'translation_domain' => 'FOSUserBundle'));
     }
 
     public function getName()

@@ -4,7 +4,7 @@
     {% set actionUrl = 'fos_user_registration_register' %}
 {% endif%}
 
-{{ form_start(form, {'action': path(actionUrl), 'attr': {'role':'form', 'class':'fos_user_registration_register clearfix'}}) }}
+{{ form_start(form, {'action': path(actionUrl), 'attr': {'role':'form', 'class':'form-main', 'id':'ajax-form', 'name':'ajax-form'}}) }}
 
 {% for type, messages in app.session.flashbag.peekAll() %}
     {% for message in messages %}
@@ -14,16 +14,11 @@
     {% endfor %}
 {% endfor %}
 
-
-<div class="span6 offset2 redes-sociais">
-    <h1>Quero me <strong>Cadastrar</strong></h1>
-    <div class="head-info">
-    
     {{ form_errors(form) }}
     {% if form.firstName is defined %}
         <div>
             {{ form_label(form.firstName, 'form.firstName' | trans) }}
-            {{ form_widget(form.firstName, {'attr': {'class': 'form-control', 'placeholder' : 'form.firstName.example' }}) }}
+            {{ form_widget(form.firstName, {'attr': {'placeholder' : 'form.firstName.example' }}) }}
             <span class="glyphicon glyphicon-remove form-control-feedback"></span>
             {{ form_errors(form.firstName) }}
         </div>
@@ -32,7 +27,7 @@
     {% if form.surname is defined %}
         <div>
             {{ form_label(form.surname, 'form.surname' | trans) }}
-            {{ form_widget(form.surname, {'attr': {'class': 'form-control', 'placeholder' : 'form.surname.example' }}) }}
+            {{ form_widget(form.surname, {'attr': {'placeholder' : 'form.surname.example' }}) }}
             <span class="glyphicon glyphicon-remove form-control-feedback"></span>
             {{ form_errors(form.surname) }}
         </div>
@@ -40,26 +35,19 @@
 
     <div>
         {{ form_label(form.email, 'form.email' | trans) }}
-        {{ form_widget(form.email, {'attr': {'class': 'form-control', 'placeholder' : 'form.email.example' }}) }}
+        {{ form_widget(form.email, {'attr': {'placeholder' : 'form.email.example' }}) }}
         <span class="glyphicon glyphicon-remove form-control-feedback"></span>
         {{ form_errors(form.email) }}
     </div>
 
     <div>
         {{ form_label(form.plainPassword, 'form.plainPassword' | trans) }}
-        {{ form_widget(form.plainPassword, {'attr': {'class': 'form-control', 'placeholder' : 'form.plainPassword.example' }}) }}
+        {{ form_widget(form.plainPassword, {'attr': {'placeholder' : 'form.plainPassword.example' }}) }}
         {{ form_errors(form.plainPassword) }}
-    </div>
-
-    <div>
-        {{ form_label(form.mobile, 'form.phone' | trans) }}
-        {{ form_widget(form.mobile, {'attr': {'class': 'form-control', 'placeholder' : ('form.phone.example' | trans) }}) }}
-        {{ form_errors(form.mobile) }}
     </div>
 
     <p>{% trans with { '%linkTerms%': path("lc_privacy")} %}By clicking on create account, you agree to our <a href="%linkTerms%">Privacy and Terms of Service</a>, including our Use of Cookies.{% endtrans %}</p>
 
     <button id="send" class="btn f-right" type="submit">Criar conta <i class="icon-ok"></i></button>
 
-</div>
 {{ form_end(form) }}
