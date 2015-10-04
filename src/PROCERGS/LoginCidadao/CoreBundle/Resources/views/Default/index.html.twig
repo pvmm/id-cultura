@@ -48,7 +48,7 @@
 <!-- Internet Explorer condition - HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
 	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->   
+<![endif]-->   e
 
 </head>       
 <body>
@@ -109,11 +109,12 @@
     <!-- OUTRAS CONTAS DE ACESSO -->
     <h1>Use contas de <strong>outros serviços</strong></h1>
 			<p style="color:#666">Se preferir, é possível usar os seguintes serviços para acessar ou criar sua conta:</p>
+			
+			<a class="connect twitter" href="{{ path('hwi_oauth_service_redirect', {'service': 'twitter'}) }}"><img src="bundles/procergslogincidadaocore/img/twitter.png" width="90px" height="90px">
+</a>
+			<a class="connect google" href="{{ path('hwi_oauth_service_redirect', {'service': 'google'}) }}"><img src="bundles/procergslogincidadaocore/img/google.png" width="90px" height="90px">
+</a>
 			<a class="connect facebook" data-href="{{ path("lc_link_facebook") }}"><img src="bundles/procergslogincidadaocore/img/facebook.png" width="90px" height="90px">
-</a>
-			<a class="connect twitter" href="{{ path('hwi_oauth_service_redirect', {'service': 'twitter'}) }}"><img src="bundles/procergslogincidadaocore/img/google.png" width="90px" height="90px">
-</a>
-			<a class="connect google" href="{{ path('hwi_oauth_service_redirect', {'service': 'google'}) }}"><img src="bundles/procergslogincidadaocore/img/twitter.png" width="90px" height="90px">
 </a>
             </div>   
           </div>   
@@ -133,11 +134,12 @@
     <!-- OUTRAS CONTAS DE ACESSO -->
     <h1>Use contas de <strong>outros serviços</strong></h1>
 			<p style="color:#666">Se preferir, é possível usar os seguintes serviços para acessar ou criar sua conta:</p>
-			<a class="connect facebook" data-href="{{ path("lc_link_facebook") }}"><img src="bundles/procergslogincidadaocore/img/facebook.png" width="90px" height="90px">
-</a>
+			
 			<a class="connect twitter" href="{{ path('hwi_oauth_service_redirect', {'service': 'twitter'}) }}"><img src="bundles/procergslogincidadaocore/img/google.png" width="90px" height="90px">
 </a>
 			<a class="connect google" href="{{ path('hwi_oauth_service_redirect', {'service': 'google'}) }}"><img src="bundles/procergslogincidadaocore/img/twitter.png" width="90px" height="90px">
+</a>
+			<a class="connect facebook" data-href="{{ path("lc_link_facebook") }}"><img src="bundles/procergslogincidadaocore/img/facebook.png" width="90px" height="90px">
 </a>
               </div>  
             </div>   
@@ -168,16 +170,21 @@
       <div class="row">
         <div class="span12">
           <h2>Informações Úteis</h2>
-			<p style="color:#FFF">O ID cultura tem o objetivo de promover a integração, o cadastro e a autenticação do cidadão junto às ferramentas e os Serviços Digitais do Governo, facilitando o relacionamento da pessoa física com o Governo do Estado e abrindo caminho para a adoção de uma Identidade Digital para as cidadãs e os cidadãos.<br><br>
+			<p style="color:#FFF">O ID da cultura é a aplicação de login único para acessar os serviços digitais do Ministério da Cultura. <br>
 
-A iniciativa promove a desburocratização e a integração de sistemas, diminui a possibilidade de fraudes e padroniza o acesso às bases de dados do Estado, ao passo que permite o registro automatizado e o acompanhamento sistemático da interação dos cidadãos com os serviços digitais geridos pela Administração Estadual.</p>
+O serviço pioneiro a adotar o ID da Cultura é a <a href="culturaviva.gov.br/rede/"> Rede Cultura Viva</a>. <br>
+
+Ainda em outubro o Sistema Nacional De Informações e Indicadores Culturais (SNIIC) se integrará ao ID da Cultura. Aguarde!<br>
+
+O ID da cultura é um aplicativo derivado do <a href="logincidadao.org.br"> Login Cidadão</a><br>
+
           <div class="row">
           <!-- Service Container --><!-- Service Container End -->
           </div>   
         </div>   
        
         <div class="span12">
-          <h2>Como criar uma Conta do ID cultura?</h2>
+          <h2>Como criar uma Conta no ID da Cultura?</h2>
         </div> 
         <div class="span8">
         
@@ -186,14 +193,15 @@ A iniciativa promove a desburocratização e a integração de sistemas, diminui
         </div>
         <div class="span4">
           <div class="ic-1"></div>
-          <div class="title-1"><h4>Você pode criar sua conta no ID cultura utilizando uma das seguintes formas:</h4></div>
+          <div class="title-1"><h4>Você pode criar sua conta no ID da Cultura utilizando uma das seguintes formas:</h4></div>
           <!-- List -->
           <div class="text-1"> 
             <ul class="list-b">
               <!-- List Items -->
               <li style="color:#FFF"><i class="icon-ok"></i> Informando seu Email e uma senha;</li>
-              <li style="color:#FFF"><i class="icon-ok"></i> Utilizando seu Login do Facebook;</li>
+              <li style="color:#FFF"><i class="icon-ok"></i> Utilizando seu Login do Google;</li>
               <li style="color:#FFF"><i class="icon-ok"></i> Utilizando seu Login do Twitter.</li>
+              <li style="color:#FFF"><i class="icon-ok"></i> Utilizando seu Login do Facebook;</li>
               
             </ul>     
           </div>
@@ -207,7 +215,8 @@ A iniciativa promove a desburocratização e a integração de sistemas, diminui
       <!-- Our Clients -->
       <div class="row">
         <div class="span12">
-          <h3>Você pode criar uma Conta do ID cultura na página inicial do ID cultura ou clicando em Cadastre-se no sistema, na página de login. Você pode usar sua Conta do ID cultura com todos os serviços da Cultura.</h3>
+          <h3>
+Você pode criar uma Conta do ID cultura clicando em Cadastre-se no sistema. Em breve você poderá usar sua Conta do ID da cultura com todos os serviços do MinC.</h3>
         </div>
       </div>
       <!-- Our Clients End -->
@@ -234,9 +243,9 @@ A iniciativa promove a desburocratização e a integração de sistemas, diminui
       <div class="row">
         <div class="span5">
         <p>
-        1 - Você gerencia seus dados pessoais.<br>
+        	1 - Você gerencia seus dados pessoais.<br>
 		2 - Arranjos de confiança para identidade digital.<br>
-		3 - Segurança e comodidade.
+		3 - Segurança e comodidade.<br>
         </p>
         <h2>Fale Conosco</h2>
         <div>         

@@ -1,10 +1,10 @@
 Hello!: Hello!
 Welcome!: Welcome!
-'Welcome to the Citizen''s Login service.': 'Welcome to the Citizen''s Login service.'
+'Welcome to the Citizen''s Login service.': 'Welcome to the ID Cultura service.'
 'Here you''ll find all you need to know about the service.': 'Here you''ll find all you need to know about the service.'
 'You might start by logging in or %link_start%registering%link_end%.': 'You might start by logging in or %link_start%registering%link_end%.'
-security.login.username: 'Email or CPF'
-security.login.password: Type your password
+security.login.username: 'CPF, username or email'
+security.login.password: Password
 security.login.remember_me: 'Remember me'
 security.login.submit: 'Log in'
 'Welcome %user.name%': 'Welcome %user.name%'
@@ -17,6 +17,7 @@ scope.cpf: CPF
 scope.email: Email
 scope.birthdate: Birthdate
 scope.city: City
+scope.voter_registration: Voter Registration
 scope.badges: Badges
 scope.picture: Picture
 scope.public_profile: Public Profile
@@ -25,13 +26,15 @@ scope.notifications: Send Notifications
 'Authorized Applications': 'Authorized Applications'
 'Description:': 'Description:'
 'Access scope:': 'Access scope:'
+'Government of Rio Grande do Sul - Promoting equality makes the difference': 'Government of Rio Grande do Sul - Promoting equality makes the difference'
 'One account. All that the Government offers.': 'One account. All that the Government offers.'
-'Citizen''s Login': 'Citizen''s Login'
+'Citizen''s Login': 'ID Cultura'
 'Captcha is invalid.': 'Captcha is invalid.'
 'Need help?': 'Need help?'
 '%link_start%Create your account%link_end%': '%link_start%Create your account%link_end%'
 'One account to all of the Government''s services': 'One account to all of the Government''s services'
 'Available services': 'Available services'
+'Government of Rio Grande do Sul': 'Government of Rio Grande do Sul'
 'Privacy and Terms of Service': 'Privacy and Terms of Service'
 Help: Help
 'Available Applications and Sites': 'Available Applications and Sites'
@@ -50,12 +53,12 @@ CPF: CPF
 CEP: CEP
 'We''re almost done!': 'We''re almost done!'
 'Your account is created, but we recommend you choose a better username.': 'Your account is created, but we recommend you choose a better username.'
-'Your username will be used to quickly refer to yourself on Citizen''s Login, just like Twitter''s @ replies.': 'Your username will be used to quickly refer to yourself on Citizen''s Login, just like Twitter''s @ replies.'
+'Your username will be used to quickly refer to yourself on Citizen''s Login, just like Twitter''s @ replies.': 'Your username will be used to quickly refer to yourself on ID Cultura, just like Twitter''s @ replies.'
 'Username:': 'Username:'
 'We''ll also need you to type your email address, since Twitter didn''t tell it to us.': 'We''ll also need you to type your email address, since Twitter didn''t tell it to us.'
 'Email:': 'Email:'
 'You''ll need a password': 'You''ll need a password'
-'To make sure that you can access the Citizen''s Login even if you lose access to your Facebook or Twitter account, please define a password.': 'To make sure that you can access the Citizen''s Login even if you lose access to your Facebook or Twitter account, please define a password.'
+'To make sure that you can access the Citizen''s Login even if you lose access to your Facebook or Twitter account, please define a password.': 'To make sure that you can access the ID Cultura even if you lose access to your Facebook or Twitter account, please define a password.'
 'Type in your password here:': 'Type in your password here:'
 'And then confirm it here:': 'And then confirm it here:'
 'To confirm your change, type your current password below:': 'To confirm your change, type your current password below:'
@@ -77,7 +80,7 @@ Notifications: Notifications
 Activate: Activate
 Deactivate: Deactivate
 cpf_reminder.subject: 'We noticed that your account doesn''t have a CPF associated with it yet.'
-cpf_reminder.message: "Hello, %name%\n\nWe noticed that your account doesn''t have a CPF associated with it yet.\n\nPlease consider visiting Citizen''s Login until %date% to complete this information. After that date, your account might be suspended.\n"
+cpf_reminder.message: "Hello, %name%\n\nWe noticed that your account doesn''t have a CPF associated with it yet.\n\nPlease consider visiting ID Cultura until %date% to complete this information. After that date, your account might be suspended.\n"
 'Toggle Navigation': 'Toggle Navigation'
 'Log in': 'Log in'
 Applications: Applications
@@ -96,8 +99,15 @@ Deactivated: Deactivated
 'Change username': 'Change username'
 exception.alreadyLinkedAccount: 'This account is already linked with another user. You have to unlink from that user before linking to this current user.'
 contact.title: 'Fale conosco'
+nfg.noprofile.found: 'Não foi encontado sua conta na Nota Fiscal Gaúcha!'
 cpf.registration.title: 'Registro de CPF'
+cpf.registration.nfg.check.invite: 'If you want to reinforce you CPF you can check with Nota Fiscal Gaúcha, you need to put you password of your account of Nota Fiscal Gaúcha.'
+cpf.registration.nfg.check.password: 'Type in your Nota Fiscal Gaúcha password here:'
+cpf.registration.nfg.checked.at: 'Validado na Nota Fiscal Gaúcha em %date1%'
+cpf.profile.nfg.check.invite: 'Você deseja reforçar seu CPF ainda mais?'
+cpf.profile.nfg.check.button: 'Verifique com a Nota Fiscal Gaúcha!'
 'Your login': 'Your login'
+'Governo do Rio Grande do Sul': 'Governo do Rio Grande do Sul'
 '<a href="%link%">Background picture</a> by %name%': '<a href="%link%">Background picture</a> by %name%'
 'Active Services': 'Active Services'
 'Other Services': 'Other Services'
@@ -108,9 +118,9 @@ notification.empty.password.title: 'You don''t have a password!'
 notification.empty.password.shortText: 'Click here to define your password.'
 notification.empty.password.text: ''
 'The application <strong>%client_name%</strong> wants to access the following information about you:': 'The application <strong>%client_name%</strong> wants to access the following information about you:'
-'This service is already active in your Citizen''s Login account': 'This service is already active in your Citizen''s Login account'
+'This service is already active in your Citizen''s Login account': 'This service is already active in your ID Cultura account'
 'Deactivate this service': 'Deactivate this service'
-'This service is not active in your Citizen''s Login account': 'This service is not active in your Citizen''s Login account'
+'This service is not active in your Citizen''s Login account': 'This service is not active in your ID Cultura account'
 'Activate this service': 'Activate this service'
 admin.apps.list: 'Manage Apps'
 social-networks.unlink.no-password: 'You must define a password before unlinking any social network.'
@@ -144,20 +154,24 @@ Inactive: Inactive
 Suggestion: Suggestion
 Send: Send
 'Your last suggested Services': 'Your last suggested Services'
-'Login Cidadão': 'Citizen Login'
+'Meu RS': 'Meu RS'
+'Login Cidadão': 'Login Cidadão'
+form.voter_registration.invalid: 'Invalid Voter Registration'
 'Do you really want to disable this service?': 'Do you really want to disable this service?'
 Yes: Yes
 No: No
-'This service uses the following data from your Login Citizen account': 'This service uses the following data from your Login Citizen account'
+'This service uses the following data from your Login Citizen account': 'This service uses the following data from your ID Cultura account'
 'This service is not available yet. Stay tuned for the launch date.': 'This service is not available yet. Stay tuned for the launch date.'
 
 'With only one account, the citizen will be able to use government''s digital services.': 'With only one account, the citizen will be able to use government''s digital services.'
 'One account. The entire Government.': 'One account. The entire Government.'
 'Creative commons': Creative commons
-lc.html.title: 'Citizen''s Login'
-'About Citizen''s Login': 'About Citizen''s Login'
-'This is the Citizen Login': 'This is the Citizen Login'
-'To enjoy all the benefits of Citizen Login, please check your information and submit the following form.': 'To enjoy all the benefits of Citizen Login, please check your information and submit the following form.'
+lc.html.title: 'ID Cultura'
+'About Citizen''s Login': 'About ID Cultura'
+voterregistration.conflict.ask.nfg: 'The informed voter registration is already being used by another person. If you are sure it''s yours then connect your account with Nota Fiscal Gaúcha to enable Voter Registration validation.'
+voterregistration.invalid: 'The informed voter registration is invalid or belongs to someone else. If you believe this is incorrect, try connection your account with Nota Fical Gaúcha to enable Voter Registration validation.'
+'This is the Citizen Login': 'This is the ID Cultura'
+'To enjoy all the benefits of Citizen Login, please check your information and submit the following form.': 'To enjoy all the benefits of ID Cultura, please check your information and submit the following form.'
 'After registering you''ll receive a confirmation email to proceed the activation of your account.': 'After registering you''ll receive a confirmation email to proceed the activation of your account.'
 scope.country: 'Country'
 scope.state: State
@@ -188,7 +202,7 @@ Click here to <strong>add an ID Card</strong>: Click here to <strong>add an ID C
 Two-Factor Authentication: Two-Factor Authentication
 Enter the code generated by your code generator device.: Enter the code generated by your code generator device.
 Authentication Code: Authentication Code
-View this notification on Citizen Login: View this notification on Citizen Login
+View this notification on Citizen Login: View this notification on ID Cultura
 contact.form.sent: Your message has been sent. Thank you for contacting us.
 Two-Factor Authentication is <strong>disabled</strong>. To enhance the security level of your account, click Enable.: Two-Factor Authentication is <strong>disabled</strong>. To enhance the security level of your account, click Enable.
 Enable: Enable
@@ -238,11 +252,3 @@ birthdate.format: 'm/d/Y'
 Activity Log: Activity Log
 Badges: Badges
 You don't have any activity log.: You don't have any activity log.
-'Select a state below:': 'Select a state below:'
-Firstname: First name
-Surname: Surname
-'After completing your information, click the following button to continue:': 'After completing your information, click the following button to continue:'
-<strong>%client%</strong> needs some additional details about you. Please complete the missing information below to continue.: <strong>%client%</strong> needs some additional details about you. Please complete the missing information below to continue.
-Personal Details: Personal Details
-Complete Missing Fields: Complete Missing Fields
-If you prefer, it's possible to use other services to login or create your account.: If you prefer, it's possible to use other services to login or create your account.
