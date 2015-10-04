@@ -11,9 +11,23 @@ jQuery(document).ready(function($) {
 /* --------------------------------------------------------
          Toggle dos formularios de registro e login
    --------------------------------------------------------     */
-        $('#send').click(function() {
-            $('#registrar').fadeOut();
-            $('#entrar-no-sistema').fadeIn();
+        $('#send').click(function() { 
+            if ($('#send').attr('value') === 'entrar') {
+              $('#registrar').fadeOut();
+              $('#entrar-no-sistema').fadeIn();
+              $('#send').attr('value', 'cadastrar');
+	      $('#send').delay(200).queue(function(n) { 
+                  $(this).html('<i class="icon-user"></i> Criar conta '); n();
+              });
+            } else if ($('#send').attr('value') === 'cadastrar') {
+              $('#registrar').fadeIn();
+              $('#entrar-no-sistema').fadeOut();
+              $('#send').attr('value', 'entrar');
+	      $('#send').delay(200).queue(function(n) { 
+                  $(this).html('<i class="icon-user"></i> Entrar '); n();
+              });
+
+            }
         });
 
 
