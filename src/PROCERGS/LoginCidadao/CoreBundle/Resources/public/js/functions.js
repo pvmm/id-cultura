@@ -29,7 +29,14 @@ jQuery(document).ready(function($) {
 
             }
         });
-
+        
+        // if form return / validation error (only at login)
+        if($('#login_form_type_username').val() !== '') {
+            $('#registrar').hide();
+            $('#entrar-no-sistema').show();
+            $('#send').attr('value', 'cadastrar');
+            $(this).html('<i class="icon-user"></i> Criar conta ');
+        } 
 
 
 /* --------------------------------------------------------	
