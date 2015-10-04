@@ -87,6 +87,7 @@ hr {
 
 p {
   margin:15px 0;
+  padding: 8px;
 }
 
 blockquote {        
@@ -222,8 +223,6 @@ a:hover {
     position:relative;
     /*transition: .5s ease;*/
     top: 15px;
-    left: 420px;
-    right: -420px;
     bottom: -191px;
 }
 
@@ -432,11 +431,29 @@ header {
   position:relative;
   background:#FFFFFF;
   height: 66px;
+  width: 100%;
+  text-align: right;
 }
 
 #content2 {
   position:relative;
   background:#075679;
+}
+
+img {
+  max-width:100%;
+}
+
+#logo-header {
+  width: 430px;
+  height: 370px;
+  background-image: url('../img/logo-header.png')
+}
+
+#background-footer {
+  background-image: url('../img/background-footer.png');
+  width: 746px;
+  height: 597px;
 }
 
 /* --------------------------------------------------------	*/
@@ -668,6 +685,7 @@ header {
   box-shadow:rgba(0, 0, 0, 0) 0 0 0 !important;
   border:0px;
   margin-bottom:8px;
+  margin-right: 1%;
 }
 
 .btn:hover {

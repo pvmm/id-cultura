@@ -5,6 +5,7 @@
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 @media only screen and (min-height: 700px) {
 	#header.big{min-height: 65vh;}
+        #logo-header { background-image: url('../img/logo-header-mobile.png'); width: 250px; height: 84px; margin-left: 0; }
 }
 @media only screen and (max-width: 1200px) {
 	.blog-grid>li:nth-of-type(odd) .blog-thumbnail{margin-left: 15px;}
@@ -12,6 +13,7 @@
 	.blog-grid .blog-content{padding: 25px 20px 0 20px;}
 	.blog-sum-up{font-size: .9em;}
 	.main-container a.blog-post-title h2{font-size: 1.6em;}
+	#logo-header { margin-left: -40px; }
 }
 @media only screen and (max-width: 1100px) {
 	#navigation ul li a:after{display: none;}
@@ -19,7 +21,9 @@
 	#navigation ul.sub-menu{top: 35px;}
 	#left-navigation, #right-navigation{margin-top: 5px;}
 	#ticker-text ul li{font-size: 4em; letter-spacing: -3px;}
-	#header.big{min-height: 65vh}	
+	#header.big{min-height: 65vh}
+	#logo-header { margin-left: -60px; }
+  
 }
 @media only screen and (max-width: 992px) {
 	#show-mobile-menu, #navigation-mobile{display: block;}
@@ -50,7 +54,9 @@
 	.blog-grid>li:nth-of-type(odd) .blog-button, .blog-grid>li .blog-button,
 	.post-metadatas, .blog-post-title h2{text-align: center !important;}
 	.blog-grid .blog-content, .blog-grid li.blog-post{height: auto !important;}
-
+        #logo-header { background-image: url('../img/logo-header-330.png'); width: 330px; height: 284px; margin-left: -40px; }
+        #background-footer { background-image: url('../img/background-footer-500.png'); width: 500px; height: 400px;}
+        #devices {margin-top: 80px;}
 }
 @media only screen and (max-width: 670px) {
 	#ticker-text ul li{font-size: 2em; letter-spacing: 0;}
@@ -63,7 +69,13 @@
 	#logo-navigation{width: 100% !important;margin-right: 0!important}
 	#scroll-bottom{display: none;}
 	#navigation.navigation-fixed{position: relative;}
+        #logo-header { background-image: url('../img/logo-header-mobile.png'); width: 250px; height: 84px;margin-left: 0; }
+        #background-footer { background-image: url('../img/background-footer-300.png'); width: 300px; height: 240px;}
+        #devices {margin-top: 80px;}
 }
 @media only screen and (max-width: 492px) {
 	#ticker-text ul li{font-size: 1.5em; letter-spacing: 0;}
+        #logo-header { background-image: url('../img/logo-header-mobile.png'); width: 250px; height: 84px; margin-left: 0;}
+        #background-footer { background-image: url('../img/background-footer-250.png'); width: 250px; height: 200px;}
+        #devices {margin-top: 80px;}
 }
