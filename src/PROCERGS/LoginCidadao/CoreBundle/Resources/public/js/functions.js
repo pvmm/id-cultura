@@ -35,7 +35,7 @@ jQuery(document).ready(function($) {
             $('#registrar').hide();
             $('#entrar-no-sistema').show();
             $('#send').attr('value', 'cadastrar');
-            $(this).html('<i class="icon-user"></i> Criar conta ');
+            $('#send').html('<i class="icon-user"></i> Criar conta ');
         } 
 
 
