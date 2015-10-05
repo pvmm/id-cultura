@@ -1,5 +1,5 @@
 {% trans_default_domain 'FOSUserBundle' %}
-{{ form_start(form1, {'action' : path("fos_user_security_check"), 'attr' : {'role' : 'form', 'class': 'form-main'}}) }}
+{{ form_start(form1, {'action' : path("fos_user_security_check"), 'attr' : {'id': 'ajax-form', 'role' : 'form', 'class': 'form-main'}}) }}
 <div class="form-content">
 
     {% if error is defined and error is not null %}
