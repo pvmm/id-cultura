@@ -4,16 +4,7 @@
     <div class="recaptcha-main">
       <div class="row">
         <div class="col-xs-12 col-sm-6">
-          <label>
-            <strong>
-              <span class="recaptcha_only_if_image" id="recaptcha_instructions_image">
-                {{ 'recaptcha.instructions.image'|trans }}
-              </span>
-              <span class="recaptcha_only_if_audio" id="recaptcha_instructions_audio">
-                {{ 'recaptcha.instructions.audio'|trans }}
-              </span>
-            </strong>
-	     <div class="col-xs-12 col-sm-5">
+          <div class="col-xs-12 col-sm-5">
         	  <div class="recaptcha-buttons">
 	            <a title="{{ 'recaptcha.instructions.new.challenge'|trans }}" href="javascript:Recaptcha.reload()" id="recaptcha_reload_btn">
         	      <span>
@@ -35,6 +26,15 @@
 	            </a>
         	</div>
 	    </div>
+          <label>
+            <strong>
+              <span class="recaptcha_only_if_image" id="recaptcha_instructions_image">
+                {{ 'recaptcha.instructions.image'|trans }}
+              </span>
+              <span class="recaptcha_only_if_audio" id="recaptcha_instructions_audio">
+                {{ 'recaptcha.instructions.audio'|trans }}
+              </span>
+            </strong>
             <span id="recaptcha_challenge_field_holder" style="display: none;"></span><input type="text" name="recaptcha_response_field" id="recaptcha_response_field" autocomplete="off" class="">
           </label>
         </div>
