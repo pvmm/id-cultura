@@ -4,7 +4,7 @@
     {% set actionUrl = 'fos_user_registration_register' %}
 {% endif%}
 
-{{ form_start(form, {'action': path(actionUrl), 'attr': {'role':'form', 'class':'form-main', 'id':'ajax-form', 'name':'ajax-form'}}) }}
+{{ form_start(form, {'action': path(actionUrl), 'attr': {'role':'form', 'class':'form-main'}}) }}
 
 {% for type, messages in app.session.flashbag.peekAll() %}
     {% for message in messages %}
