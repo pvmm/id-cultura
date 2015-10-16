@@ -21,6 +21,7 @@
 <!-- Styles -->
 {% stylesheets 'bundles/procergslogincidadaocore/css/idcultura-styles.css' filter='cssrewrite' %}
     <link rel="stylesheet" href="{{ asset_url }}" />
+{% endstylesheets %}
 {% stylesheets 'bundles/procergslogincidadaocore/css/idcultura-styleAnimacao.css' filter='cssrewrite' %}
    <link rel="stylesheet" href="{{ asset_url }}" />
 {% endstylesheets %}
@@ -32,6 +33,8 @@
   <link rel="stylesheet" href="{{ asset_url }}" />
 {% endstylesheets %}
 
+{% stylesheets 'bundles/procergslogincidadaocore/css/custom.recaptcha.css' filter='cssrewrite' %}
+  <link rel="stylesheet" href="{{ asset_url}}" />
 {% endstylesheets %}
 
 {% stylesheets 'bundles/procergslogincidadaocore/css/font-awesome/font-awesome.css' filter='cssrewrite' filter='?uglifycss' %}
@@ -81,7 +84,7 @@
 		    data-vide-bg="ogv: ../images/video/video2, webm:../video/video3, poster: images/video/poster" data-vide-options="posterType: jpg, loop: true, muted: true, position: 50% 50%">
 		</div>
 
-<div class="container">
+<div id="ajax-form" class="container">
 <div class="row t-container">
 <div class="texture">
   <img id="logo-idcultura" src="bundles/procergslogincidadaocore/img/background.png" alt="">
@@ -135,9 +138,9 @@
     <h1>Use contas de <strong>outros serviços</strong></h1>
 			<p style="color:#666">Se preferir, é possível usar os seguintes serviços para acessar ou criar sua conta:</p>
 
-			<a class="connect twitter" href="{{ path('hwi_oauth_service_redirect', {'service': 'twitter'}) }}"><img src="bundles/procergslogincidadaocore/img/google.png" width="90px" height="90px">
+			<a class="connect twitter" href="{{ path('hwi_oauth_service_redirect', {'service': 'twitter'}) }}"><img src="bundles/procergslogincidadaocore/img/twitter.png" width="90px" height="90px">
 </a>
-			<a class="connect google" href="{{ path('hwi_oauth_service_redirect', {'service': 'google'}) }}"><img src="bundles/procergslogincidadaocore/img/twitter.png" width="90px" height="90px">
+			<a class="connect google" href="{{ path('hwi_oauth_service_redirect', {'service': 'google'}) }}"><img src="bundles/procergslogincidadaocore/img/google.png" width="90px" height="90px">
 </a>
 			<a class="connect facebook" data-href="{{ path("lc_link_facebook") }}"><img src="bundles/procergslogincidadaocore/img/facebook.png" width="90px" height="90px">
 </a>
@@ -260,7 +263,7 @@ Você pode criar uma Conta do ID cultura clicando em Cadastre-se no sistema. Em 
             <ul class="nav">
               <li class="active"><a title="" href="#send">Entrar no ID Cultura</a></li>
               <li class="active"><a title="" href="https://github.com/culturagovbr/id-cultura">Repositório no GitHub</a></li>
-              <li class="active"><a title="" href="#menu-topo">Topo</a></li>
+              <li class="active"><a title="" href="#top">Topo</a></li>
 
             </ul><select class="nav-responsive"><option value="#" selected="selected"> Entrar no ID Cultura</option><option value="#" selected="selected"> Repositório no GitHub</option><option value="#" selected="selected"> Topo</option></select>
           </nav>
@@ -336,5 +339,20 @@ Você pode criar uma Conta do ID cultura clicando em Cadastre-se no sistema. Em 
       }(document));
     </script>
 
+    <!— Piwik —>
+    <script type="text/javascript">
+        var _paq = _paq || [];
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+	(function() {
+                var u="//analise.cultura.gov.br/";
+       	        _paq.push(['setTrackerUrl', u+'piwik.php']);
+                _paq.push(['setSiteId', 21]);
+                var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+               	g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+       	})();
+    </script>
+    <noscript><p><img src="//analise.cultura.gov.br/piwik.php?idsite=21" style="border:0;" alt="" /></p></noscript>
+    <!— End Piwik Code —>
 </body>
 </html>

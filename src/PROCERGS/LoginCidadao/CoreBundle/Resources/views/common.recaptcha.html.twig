@@ -4,6 +4,28 @@
     <div class="recaptcha-main">
       <div class="row">
         <div class="col-xs-12 col-sm-6">
+          <div class="col-xs-12 col-sm-5">
+        	  <div class="recaptcha-buttons">
+	            <a title="{{ 'recaptcha.instructions.new.challenge'|trans }}" href="javascript:Recaptcha.reload()" id="recaptcha_reload_btn">
+        	      <span>
+	                {{ 'recaptcha.instructions.new.challenge'|trans }}
+        	      </span>
+	            </a>
+	            <a title="{{ 'recaptcha.instructions.new.audio'|trans }}" href="javascript:Recaptcha.switch_type('audio');" class="recaptcha_only_if_image" id="recaptcha_switch_audio_btn">
+	              <span>
+	                {{ 'recaptcha.instructions.new.audio'|trans }}
+        	      </span>
+	            </a>
+        	    <a title="{{ 'recaptcha.instructions.new.image'|trans }}" href="javascript:Recaptcha.switch_type('image');" class="recaptcha_only_if_audio" id="recaptcha_switch_img_btn">
+	              <span>
+	                {{ 'recaptcha.instructions.new.image'|trans }}
+	              </span>
+        	    </a>
+	            <a title="{{ 'recaptcha.instructions.help'|trans }}" href="javascript:Recaptcha.showhelp()" id="recaptcha_whatsthis_btn">
+        	      <span>{{ 'recaptcha.instructions.help'|trans }}</span>
+	            </a>
+        	</div>
+	    </div>
           <label>
             <strong>
               <span class="recaptcha_only_if_image" id="recaptcha_instructions_image">
@@ -17,28 +39,6 @@
           </label>
         </div>
 
-        <div class="col-xs-12 col-sm-5">
-          <div class="recaptcha-buttons">
-            <a title="{{ 'recaptcha.instructions.new.challenge'|trans }}" href="javascript:Recaptcha.reload()" id="recaptcha_reload_btn">
-              <span>
-                {{ 'recaptcha.instructions.new.challenge'|trans }}
-              </span>
-            </a>
-            <a title="{{ 'recaptcha.instructions.new.audio'|trans }}" href="javascript:Recaptcha.switch_type('audio');" class="recaptcha_only_if_image" id="recaptcha_switch_audio_btn">
-              <span>
-                {{ 'recaptcha.instructions.new.audio'|trans }}
-              </span>
-            </a>
-            <a title="{{ 'recaptcha.instructions.new.image'|trans }}" href="javascript:Recaptcha.switch_type('image');" class="recaptcha_only_if_audio" id="recaptcha_switch_img_btn">
-              <span>
-                {{ 'recaptcha.instructions.new.image'|trans }}
-              </span>
-            </a>
-            <a title="{{ 'recaptcha.instructions.help'|trans }}" href="javascript:Recaptcha.showhelp()" id="recaptcha_whatsthis_btn">
-              <span>{{ 'recaptcha.instructions.help'|trans }}</span>
-            </a>
-          </div>
-        </div>
       </div>
     </div>
   </div>
