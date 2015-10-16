@@ -11,6 +11,8 @@ class RegistrationFormType extends BaseType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+            ->add('firstName', null, array('required' => true, 'label' => 'form.firstName', 'translation_domain' => 'FOSUserBundle'))
+            ->add('surname', null, array('required' => true, 'label' => 'form.surname', 'translation_domain' => 'FOSUserBundle'))
             ->add('email', 'email', array('required' => true, 'label' => 'form.email', 'translation_domain' => 'FOSUserBundle'))
             ->add('plainPassword', 'password', array('required' => true, 'label' => 'form.password', 'translation_domain' => 'FOSUserBundle'));
     }
@@ -19,5 +21,4 @@ class RegistrationFormType extends BaseType
     {
         return 'procergs_person_registration';
     }
-
 }
