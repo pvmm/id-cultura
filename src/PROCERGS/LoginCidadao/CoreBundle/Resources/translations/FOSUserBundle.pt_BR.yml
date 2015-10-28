@@ -23,7 +23,7 @@ form.password: 'Criar uma senha:'
 form.password_confirmation: 'Confirme sua senha:'
 form.new_password: 'Nova senha:'
 form.new_password_confirmation: 'Repita a senha:'
-form.firstName: Nome
+form.firstName: Primeiro nome
 form.firstName.example: Machado
 form.surname: Sobrenome
 form.surname.example: de Assis
