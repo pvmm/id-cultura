@@ -24,9 +24,9 @@ form.password_confirmation: 'Confirme sua senha:'
 form.new_password: 'Nova senha:'
 form.new_password_confirmation: 'Repita a senha:'
 form.firstName: Nome
-form.firstName.example: Fulano
+form.firstName.example: Machado
 form.surname: Sobrenome
-form.surname.example: de Tal
+form.surname.example: de Assis
 form.birthdate: 'Data de nascimento'
 form.cep: CEP
 form.cpf: CPF
