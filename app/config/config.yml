@@ -46,6 +46,7 @@ assetic:
     use_controller: false
     bundles:        [ "PROCERGSLoginCidadaoCoreBundle", "PROCERGSLoginCidadaoNotificationBundle" ]
     #java: /usr/bin/java
+    node: /usr/bin/nodejs
     assets:
       bootstrap_fonts_woff:
           inputs:
@@ -75,6 +76,8 @@ assetic:
           - '@PROCERGSLoginCidadaoCoreBundle/Resources/public/js/jquery.infinitescroll.local.js'
           - '@PROCERGSLoginCidadaoCoreBundle/Resources/public/js/jquery.visible.min.js'
           - '@PROCERGSLoginCidadaoCoreBundle/Resources/public/js/general.js'
+          - '@PROCERGSLoginCidadaoCoreBundle/Resources/public/js/functions.js'
+          - '@PROCERGSLoginCidadaoCoreBundle/Resources/public/js/plugins.js'
       lc_base_css:
         inputs:
           - 'bundles/procergslogincidadaocore/bootstrap/3.3.1/css/bootstrap.min.css'

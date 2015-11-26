@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="not-ie" lang="en"> <!--<![endif]-->
+<head>
+<!-- Basic Meta Tags -->
+<meta charset="utf-8">
+<title>IDcultura - Ministério da Cultura</title>
+<meta name="description" content="MinC - Ministério da Cultura">
+<meta name="keywords" content="MinC, ID, MINC, arte, cultura, login unico, cultura viva">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--[if (gte IE 9)|!(IE)]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<![endif]-->
+
+<!-- Favicon -->
+<link href="bundles/procergslogincidadaocore/img/favicon.png" rel="icon" type="image/png">
+
+<!-- Styles -->
+{% stylesheets 'bundles/procergslogincidadaocore/css/idcultura-styles.css' filter='cssrewrite' %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+{% endstylesheets %}
+{% stylesheets 'bundles/procergslogincidadaocore/css/idcultura-styleAnimacao.css' filter='cssrewrite' %}
+   <link rel="stylesheet" href="{{ asset_url }}" />
+{% endstylesheets %}
+
+{% stylesheets 'bundles/procergslogincidadaocore/css/idcultura-options.css' filter='cssrewrite' %}
+  <link rel="stylesheet" href="{{ asset_url }}" />
+{% endstylesheets %}
+{% stylesheets 'bundles/procergslogincidadaocore/css/idcultura-responsive.css' filter='cssrewrite' %}
+  <link rel="stylesheet" href="{{ asset_url }}" />
+{% endstylesheets %}
+
+{% stylesheets 'bundles/procergslogincidadaocore/css/custom.recaptcha.css' filter='cssrewrite' %}
+  <link rel="stylesheet" href="{{ asset_url}}" />
+{% endstylesheets %}
+
+{% stylesheets 'bundles/procergslogincidadaocore/css/font-awesome/font-awesome.css' filter='cssrewrite' filter='?uglifycss' %}
+  <link rel="stylesheet" href="{{ asset_url }}" />
+{% endstylesheets %}
+{% stylesheets 'bundles/procergslogincidadaocore/css/font-awesome/font-awesome-ie7.min.css' filter='cssrewrite' filter='?uglifycss' %}
+  <link rel="stylesheet" href="{{ asset_url }}" />
+{% endstylesheets %}
+
+<!-- Web Fonts -->
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href="http://fonts.googleapis.com/css?family=Titillium+Web:200,300,400,600,700" rel="stylesheet" type="text/css">
+
+<!-- Internet Explorer condition - HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+</head>
+<body id="body">
+{% set form1 = lc_getForm() %}
+{% set form = lc_getFormFactory() %}
+
+
+<!-- BARRA DO GOVERNO FEDERAL -->
+<div id="barra-brasil" style="background:#7F7F7F; height: 20px; padding:0 0 0 10px;display:block;">
+<ul id="menu-barra-temp" style="list-style:none;">
+	<li style="display:inline; float:left;padding-right:10px; margin-right:10px; border-right:1px solid #EDEDED"><a href="http://brasil.gov.br" style="font-family:sans,sans-serif; text-decoration:none; color:white;">Portal do Governo Brasileiro</a></li>
+	<li><a style="font-family:sans,sans-serif; text-decoration:none; color:white;" href="http://epwg.governoeletronico.gov.br/barra/atualize.html">Atualize sua Barra de Governo</a></li>
+</ul>
+</div>
+<!-- FIM DA BARRA GOV -->
+
+<div id="menu-topo" align="center">
+<button id="send" class="btn acesso" value="cadastrar"><i class="icon-user"></i> Criar conta </button>
+
+</div>
+
+<!-- Header -->
+<header id="header" class="big with-separation-bottom">
+
+<!-- POINTER ANIMACAO DO FUNDO -->
+		<canvas id="header-canvas"></canvas>
+    <div id="shade"></div>
+    <!-- PARA COLOCAR VIDEO NO FUNDO - CAMPANHA -->
+    <div id="header-video"
+		    data-vide-bg="ogv: ../images/video/video2, webm:../video/video3, poster: images/video/poster" data-vide-options="posterType: jpg, loop: true, muted: true, position: 50% 50%">
+		</div>
+
+<div id="ajax-form" class="container">
+<div class="row t-container">
+<div class="texture">
+  <img id="logo-idcultura" src="bundles/procergslogincidadaocore/img/background.png" alt="">
+</div>
+<!-- Logo -->
+<div class="span3">
+  <div class="logo">
+    <a href="#"><div id="logo-header"></div></a>
+  </div>
+</div>
+<!--
+<div class="span9">
+  <div class="row space90"></div>
+</div>
+-->
+<div class="span8" id="registrar">
+  <div class="row">
+    <div class="span6 offset2 redes-sociais">
+    <!-- QUERO ME CADASTRAR -->
+    <h1>Quero me <strong>Cadastrar</strong></h1>
+    <div class="head-info">
+
+     {{ include('PROCERGSLoginCidadaoCoreBundle::common.register.html.twig') }}
+
+    <!-- OUTRAS CONTAS DE ACESSO -->
+    <h1>Use contas de <strong>outros serviços</strong></h1>
+			<p style="color:#666">Se preferir, é possível usar os seguintes serviços para acessar ou criar sua conta:</p>
+
+			<a class="connect twitter" href="{{ path('hwi_oauth_service_redirect', {'service': 'twitter'}) }}"><img src="bundles/procergslogincidadaocore/img/twitter.png" width="90px" height="90px">
+</a>
+			<a class="connect google" href="{{ path('hwi_oauth_service_redirect', {'service': 'google'}) }}"><img src="bundles/procergslogincidadaocore/img/google.png" width="90px" height="90px">
+</a>
+			<a class="connect facebook" data-href="{{ path("lc_link_facebook") }}"><img src="bundles/procergslogincidadaocore/img/facebook.png" width="90px" height="90px">
+</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<div class="span8" id="entrar-no-sistema">
+          <div class="row">
+
+            <div class="span6 offset2 redes-sociais">
+            <!-- ENTRAR NO SISTEMA -->
+            <h1>J&aacute; tenho cadastro</h1>
+              <div class="head-info">
+
+     {{ include('PROCERGSLoginCidadaoCoreBundle::common.login.html.twig') }}
+
+    <!-- OUTRAS CONTAS DE ACESSO -->
+    <h1>Use contas de <strong>outros serviços</strong></h1>
+			<p style="color:#666">Se preferir, é possível usar os seguintes serviços para acessar ou criar sua conta:</p>
+
+			<a class="connect twitter" href="{{ path('hwi_oauth_service_redirect', {'service': 'twitter'}) }}"><img src="bundles/procergslogincidadaocore/img/twitter.png" width="90px" height="90px">
+</a>
+			<a class="connect google" href="{{ path('hwi_oauth_service_redirect', {'service': 'google'}) }}"><img src="bundles/procergslogincidadaocore/img/google.png" width="90px" height="90px">
+</a>
+			<a class="connect facebook" data-href="{{ path("lc_link_facebook") }}"><img src="bundles/procergslogincidadaocore/img/facebook.png" width="90px" height="90px">
+</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="space60"></div>
+
+      <div class="row">
+        <div class="span12">
+          <!-- USO PARA OUTRAS INFOR -->
+
+          <!-- FIM - USO PARA OUTRAS INFOR -->
+        </div>
+      </div>
+  </div>
+
+
+  </header>
+
+
+  <!-- Header End -->
+
+  <!-- Content -->
+  <div id="content2">
+    <div class="container">
+      <div class="row">
+        <div class="span12">
+          <h2>Informações Úteis</h2>
+			<p style="color:#FFF">O ID da cultura é a aplicação de login único para acessar os serviços digitais do Ministério da Cultura. <br>
+
+O serviço pioneiro a adotar o ID da Cultura é a <a href="http://culturaviva.gov.br/rede/"> Rede Cultura Viva</a>. <br>
+
+Ainda em outubro o Sistema Nacional De Informações e Indicadores Culturais (SNIIC) se integrará ao ID da Cultura. Aguarde!<br>
+
+O ID da cultura é um aplicativo derivado do <a href="http://logincidadao.org.br"> Login Cidadão</a><br>
+
+          <div class="row">
+          <!-- Service Container --><!-- Service Container End -->
+          </div>
+        </div>
+
+        <div class="span12">
+          <h2>Como criar uma Conta no ID da Cultura?</h2>
+        </div>
+        <div class="span8">
+
+          <div class="btn h-button"><a href="#ajax-form"><h3>Entrar no ID cultura</h3></a></div>
+          <img id="devices" src="bundles/procergslogincidadaocore/img/devices.png" alt="">
+        </div>
+        <div class="span4">
+          <div class="ic-1"></div>
+          <div class="title-1"><h4>Você pode criar sua conta no ID da Cultura utilizando uma das seguintes formas:</h4></div>
+          <!-- List -->
+          <div class="text-1">
+            <ul class="list-b">
+              <!-- List Items -->
+              <li style="color:#FFF"><i class="icon-ok"></i> Informando seu Email e uma senha;</li>
+              <li style="color:#FFF"><i class="icon-ok"></i> Utilizando seu Login do Google;</li>
+              <li style="color:#FFF"><i class="icon-ok"></i> Utilizando seu Login do Twitter.</li>
+              <li style="color:#FFF"><i class="icon-ok"></i> Utilizando seu Login do Facebook;</li>
+
+            </ul>
+          </div>
+          <!-- List End -->
+        </div>
+
+      </div>
+
+      <div class="space40"></div>
+
+      <!-- Our Clients -->
+      <div class="row">
+        <div class="span12">
+          <h3>
+Você pode criar uma Conta do ID cultura clicando em Cadastre-se no sistema. Em breve você poderá usar sua Conta do ID da cultura com todos os serviços do MinC.</h3>
+        </div>
+      </div>
+      <!-- Our Clients End -->
+
+      <div class="space50"></div>
+
+    </div>
+  </div>
+  <!-- Content End -->
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="span12 pos-r">
+          <h2>Porque utilizar o ID da Cultura?</h2>
+          <div class="texture-footer">
+            <div id="logo-id"></div>
+            <div id="background-footer"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="span5">
+        <p>
+        	1 - Você gerencia seus dados pessoais.<br>
+		2 - Arranjos de confiança para identidade digital.<br>
+		3 - Segurança e comodidade.<br>
+        </p>
+        <h2>Fale Conosco</h2>
+        <div>
+
+          Endereço: Esplanada dos Ministérios, Bloco B, 3º andar, CEP 70068-900, <br>
+          Brasília - Distrito Federal <br>Telefone: 55 61 2024 2626
+        </div>
+        <div class="span9">
+         <div class="row space90"></div>
+          <nav class="navbar">
+            <!-- Menu -->
+            <ul class="nav">
+              <li class="active"><a title="" href="#send">Entrar no ID Cultura</a></li>
+              <li class="active"><a title="" href="https://github.com/culturagovbr/id-cultura">Repositório no GitHub</a></li>
+              <li class="active"><a title="" href="#top">Topo</a></li>
+
+            </ul><select class="nav-responsive"><option value="#" selected="selected"> Entrar no ID Cultura</option><option value="#" selected="selected"> Repositório no GitHub</option><option value="#" selected="selected"> Topo</option></select>
+          </nav>
+          <div class="row space15 hidden-phone"></div>
+        </div>
+
+
+
+        </div>
+      </div>
+
+      <div class="row space50"></div>
+      <div class="row">
+        <div class="span6">
+          <div class="logo-footer">
+            <a href="#"><img alt="" src="bundles/procergslogincidadaocore/img/logo-footer.png"></a>
+            Integrando serviços digitais.
+          </div>
+        </div>
+        <div class="span6 right">
+          <br>
+          <!-- USO PARA INFORMACOES ADICIONAIS -->
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <div id="footer-brasil"></div>
+  <!-- Footer End -->
+
+  <!-- JavaScripts -->
+    {% javascripts '@PROCERGSLoginCidadaoCoreBundle/Resources/public/js/jquery/1.11.0/jquery.min.js' filter='?uglifyjs2' %}
+          <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+    {% javascripts '@PROCERGSLoginCidadaoCoreBundle/Resources/public/js/functions.js' filter='?uglifyjs2' %}
+          <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+    {% javascripts '@PROCERGSLoginCidadaoCoreBundle/Resources/public/js/plugins.js' filter='?uglifyjs2' %}
+          <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+    <script defer src="http://barra.brasil.gov.br/barra.js" type="text/javascript"></script>
+
+    <script>
+      window.fbAsyncInit = function() {
+          FB.init({
+              appId      : '{{ facebook_app_id }}',
+              status     : true, // check login status
+              cookie     : true, // enable cookies to allow the server to access the session
+              xfbml      : false  // parse XFBML
+          });
+          FB.getLoginStatus(function(response) {
+          {% if app.session.get('facebook.logout') is not null %}
+            var sessionClean = {{ app.session.remove('facebook.logout') }};
+            FB.logout();
+          {% endif %}
+             var button = $('a.connect.facebook');
+             if (button.length > 0) {
+                  var url = button.data('href');
+                  if (response.status === 'unknown') {
+                      url += '?logout';
+                  }
+                  button.attr('href', url);
+              }
+          });
+      };
+      (function(d){
+          var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+          if (d.getElementById(id)) {return;}
+          js = d.createElement('script'); js.id = id; js.async = true;
+          js.src = "//connect.facebook.net/en_US/all.js";
+          ref.parentNode.insertBefore(js, ref);
+      }(document));
+    </script>
+
+    <!— Piwik —>
+    <script type="text/javascript">
+        var _paq = _paq || [];
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+	(function() {
+                var u="//analise.cultura.gov.br/";
+       	        _paq.push(['setTrackerUrl', u+'piwik.php']);
+                _paq.push(['setSiteId', 21]);
+                var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+               	g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+       	})();
+    </script>
+    <noscript><p><img src="//analise.cultura.gov.br/piwik.php?idsite=21" style="border:0;" alt="" /></p></noscript>
+    <!— End Piwik Code —>
+</body>
+</html>

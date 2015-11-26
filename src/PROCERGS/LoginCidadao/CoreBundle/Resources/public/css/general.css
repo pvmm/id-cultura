@@ -13,7 +13,7 @@
 
 *, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: 'Open Sans', arial;
-    font-weight: 300;
+/*    font-weight: 300;*/
 }
 
 .font-a {
@@ -23,7 +23,6 @@
 html, body {
     height: 100%;
     background-color: transparent;
-    overflow: auto;
 }
 
 html {
@@ -352,6 +351,7 @@ form .has-feedback .sr-only ~ .form-control-feedback {
     min-height: 250px;
     position: relative;
     padding: 10px 30px;
+    z-index: 10;
 }
 
 .general-content h4 {
@@ -515,4 +515,35 @@ form .has-feedback .sr-only ~ .form-control-feedback {
 .connect-box h3 {
     color: #474747;
     text-shadow: 1px 1px 1px #D8D8D8;
+}
+
+.container-fluid {
+    z-index: 10;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    margin-top: -750px;
+    width: 100%;
+}
+
+.container-fluid {
+    padding: 0 !important;
+}
+
+.container-fluid h1 {
+    font-size: 45px !important;
+}
+
+.container-fluid h2,
+.container-fluid h3,
+.container-fluid h4 {
+    color: #444;
+}
+
+.container-fluid .row {
+    margin-right: 0 !important;
+}
+
+.general-content p a {
+    color: #000;
 }

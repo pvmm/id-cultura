@@ -18,7 +18,6 @@ button:focus{outline:0;}
 }
 .with-separation-bottom:after{
 	content: "";
-	background-image: url("../images/breaker.svg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center bottom;
