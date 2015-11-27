@@ -10,28 +10,34 @@ jQuery(document).ready(function($) {
 
 /* --------------------------------------------------------
          Toggle dos formularios de registro e login
-   --------------------------------------------------------     */
+	 --------------------------------------------------------     */
+    var current_url = window.location.pathname;
+    
         $('#send').click(function() { 
-            if ($('#send').attr('value') === 'entrar') {
-              $('#registrar').fadeOut();
-              $('#entrar-no-sistema').fadeIn();
-              $('#send').attr('value', 'cadastrar');
-	      $('#send').delay(200).queue(function(n) { 
-                  $(this).html('<i class="icon-user"></i> Criar conta '); n();
-              });
-            } else if ($('#send').attr('value') === 'cadastrar') {
-              $('#registrar').fadeIn();
-              $('#entrar-no-sistema').fadeOut();
-              $('#send').attr('value', 'entrar');
-	      $('#send').delay(200).queue(function(n) { 
-                  $(this).html('<i class="icon-user"></i> Entrar '); n();
-              });
-
-            }
+	    // home: alterna entre formularios
+	    if (current_url === '/') {
+		if ($('#send').attr('value') === 'entrar') {
+		    $('#registrar').fadeOut();
+		    $('#entrar-no-sistema').fadeIn();
+		    $('#send').attr('value', 'cadastrar');
+		    $('#send').delay(200).queue(function(n) { 
+			$(this).html('<i class="icon-user"></i> Criar conta '); n();
+		    });
+		} else if ($('#send').attr('value') === 'cadastrar') {
+		    $('#registrar').fadeIn();
+		    $('#entrar-no-sistema').fadeOut();
+		    $('#send').attr('value', 'entrar');
+		    $('#send').delay(200).queue(function(n) { 
+			$(this).html('<i class="icon-user"></i> Entrar '); n();
+		    });		   
+		}
+	    } else {
+		window.location.href = '/';
+	    }
         });
         
         // if form return / validation error (only at login)
-        if($('#login_form_type_username').val() !== '') {
+    if($('#login_form_type_username').val() !== '' && current_url === '/') {
             $('#registrar').hide();
             $('#entrar-no-sistema').show();
             $('#send').attr('value', 'cadastrar');

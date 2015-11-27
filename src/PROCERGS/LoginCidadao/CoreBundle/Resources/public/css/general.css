@@ -516,34 +516,3 @@ form .has-feedback .sr-only ~ .form-control-feedback {
     color: #474747;
     text-shadow: 1px 1px 1px #D8D8D8;
 }
-
-.container-fluid {
-    z-index: 10;
-    position: relative;
-    padding: 0;
-    margin: 0;
-    margin-top: -750px;
-    width: 100%;
-}
-
-.container-fluid {
-    padding: 0 !important;
-}
-
-.container-fluid h1 {
-    font-size: 45px !important;
-}
-
-.container-fluid h2,
-.container-fluid h3,
-.container-fluid h4 {
-    color: #444;
-}
-
-.container-fluid .row {
-    margin-right: 0 !important;
-}
-
-.general-content p a {
-    color: #000;
-}

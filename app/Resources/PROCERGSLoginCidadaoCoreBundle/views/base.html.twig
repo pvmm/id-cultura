@@ -22,11 +22,6 @@
 {% endblock %}
 
 {% block stylesheets %}
-	{% block stylesheets_custom %}
-	    {% stylesheets '@lc_base_css' filter='cssrewrite' filter='?uglifycss' %}
-			<link rel="stylesheet" href="{{ asset_url }}" />
-	    {% endstylesheets %}
-    {% endblock %}
     {% stylesheets 'bundles/procergslogincidadaocore/css/ie/ie7.css' filter='cssrewrite' filter='?uglifycss' %}
         <!--[if IE 7]>
           <link rel="stylesheet" href="{{ asset_url }}" />

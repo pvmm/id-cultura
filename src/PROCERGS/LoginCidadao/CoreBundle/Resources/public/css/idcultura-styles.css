@@ -867,7 +867,7 @@ table a:hover{
   position:relative;
   height:15px;
   width:95%;
-  padding:10px 12px 14px 12px; 
+  padding:10px 12px 14px 12px !important;
   margin-top:10px;
   color:#979797;
   background:#464646;
@@ -1473,4 +1473,60 @@ table a:hover{
 
 #registrar {
   display: none;
+}
+
+.container-fluid {
+    z-index: 10;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    margin-top: -750px;
+    width: 100%;
+}
+
+.container-fluid {
+    padding: 0 !important;
+}
+
+.container-fluid h1 {
+    font-size: 45px !important;
+}
+
+.container-fluid h2,
+.container-fluid h3,
+.container-fluid h4 {
+    color: #444;
+}
+
+.container-fluid .row {
+    margin: 0 auto;
+}
+
+.general-content {
+    background-color: #F1F1F1;
+    opacity: 0.8;
+    box-shadow: 1px 1px 1px #CCCCCC;
+    margin-bottom: 30px;
+    min-height: 250px;
+    position: relative;
+    padding: 10px 30px;
+    margin: 0 auto;
+    width: 70%;
+    z-index: 10;
+}
+
+.general-content h4 {
+    font-weight: bold;
+}
+
+.general-content p a {
+    color: #000;
+}
+
+#page-contact .general-content {
+    background-color: transparent;
+}
+
+#page-contact label {
+    display: none;
 }
