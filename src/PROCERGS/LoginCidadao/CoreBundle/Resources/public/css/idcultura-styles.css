@@ -678,7 +678,7 @@ input#remember_me {
 /*  Buttons  */
 /* --------------------------------------------------------	*/
   
-.btn {
+#menu-topo .btn {
   color:#fff;
   background:#EDB636;
   height:38px;
@@ -693,7 +693,7 @@ input#remember_me {
   margin-right: 1%;
 }
 
-.btn:hover {
+#menu-topo .btn:hover {
   color:#fff;
   background:#666;
 }
@@ -1479,7 +1479,6 @@ table a:hover{
     z-index: 10;
     position: relative;
     padding: 0;
-    margin: 0;
     margin-top: -750px;
     width: 100%;
 }
@@ -1498,8 +1497,9 @@ table a:hover{
     color: #444;
 }
 
-.container-fluid .row {
-    margin: 0 auto;
+.container-fluid .row div {
+    margin-left: 12%;
+    margin-right: 12%;
 }
 
 .general-content {
@@ -1511,7 +1511,7 @@ table a:hover{
     position: relative;
     padding: 10px 30px;
     margin: 0 auto;
-    width: 70%;
+    width: 76%;
     z-index: 10;
 }
 
@@ -1529,4 +1529,27 @@ table a:hover{
 
 #page-contact label {
     display: none;
+}
+
+#lc-navbar-ul li {
+    display: inline;
+}
+
+/* inside profile edition */
+.settings-content {
+    margin: 0 auto;
+    width: 80%;
+    background-color: #F1F1F1;
+    opacity: 0.8;
+    padding: 10px;
+    min-height: 400px;
+}
+
+.settings-content a {
+    color: #333;
+}
+
+.row {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
 }
