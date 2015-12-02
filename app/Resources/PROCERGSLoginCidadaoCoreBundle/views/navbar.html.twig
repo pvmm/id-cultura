@@ -10,20 +10,21 @@ ns,sans-serif; text-decoration:none; color:white;">Portal do Governo Brasileiro<
 <!-- FIM DA BARRA GOV -->
 
 <div id="menu-topo" align="center">
-  {% if app.user == null %}
-  <button id="send" class="btn acesso" value="cadastrar"><i class="icon-user"></i> Entrar </button>
-  
-  {% else %}  
   <ul id="lc-navbar-ul">
     <li>
+  
+  {% if app.user == null %}
+      <button id="send" class="btn acesso" value="cadastrar"><i class="icon-user"></i> Entrar </button>
+  
+  {% else %}  
+	{% if app.user != null %}
+      <button type="button" class="btn btn-default navbar-toggle" id="toggle-settings-nav">
         <span class="sr-only">{% trans %}Toggle Navigation{% endtrans %}</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-	{% if app.user != null %}
-	<button type="button" class="btn btn-default navbar-toggle" id="toggle-settings-nav">
-        {% endif %}
-	</button>
+      </button>
+      {% endif %}
     </li>
 
     {% if is_granted('ROLE_ALLOWED_TO_SWITCH') or is_granted('ROLE_PREVIOUS_ADMIN') %}

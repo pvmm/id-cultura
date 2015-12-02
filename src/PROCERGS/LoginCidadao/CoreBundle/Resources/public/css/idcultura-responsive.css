@@ -54,11 +54,16 @@
 	.blog-grid>li:nth-of-type(odd) .blog-button, .blog-grid>li .blog-button,
 	.post-metadatas, .blog-post-title h2{text-align: center !important;}
 	.blog-grid .blog-content, .blog-grid li.blog-post{height: auto !important;}
-        #logo-header { background-image: url('../img/logo-header-330.png'); width: 330px; height: 284px; margin-left: -40px; }
+        #logo-header { 
+	    background-image: url('../img/logo-header-mobile.png'); 
+	    width: 250px; 
+	    height: 84px; 
+	    margin-left: 0; 
+	}
         #background-footer { background-image: url('../img/background-footer-500.png'); width: 500px; height: 400px;}
         #devices {margin-top: 80px;}
 }
-@media only screen and (max-width: 670px) {
+@media only screen and (max-width: 760px) {
 	#ticker-text ul li{font-size: 2em; letter-spacing: 0;}
 	.main-container .btn{padding: 7px 15px 5px 15px;}
 	.custom-section-text, .custom-section-buttons{float: none; width: 100%; text-align: center;}
@@ -72,7 +77,23 @@
         #logo-header { background-image: url('../img/logo-header-mobile.png'); width: 250px; height: 84px;margin-left: 0; }
         #background-footer { background-image: url('../img/background-footer-250.png'); width: 250px; height: 200px;}	
         #devices {margin-top: 80px;}
+	
+	/*menu retratil*/
+	#menu-topo .navbar-toggle {  display: inline-block }
+	#toggle-settings-nav .btn {width: 40px; background-color: #F00 }
+	.settings-nav {left: -300px}   
+	.menu-open .settings-nav {left: 0}
+	#menu-topo .navbar-toggle .icon-bar {width: 22px; background-color: #666;  border-radius: 1px; display: block !important; height: 2px; }
+	#menu-topo .navbar-toggle:hover .icon-bar {background-color: #fff; }   
+	.menu-open .settings-content, .menu-open footer .content, .menu-open .alert-bar {
+	    -moz-transform: translateX(200px);
+	    -webkit-transform: translateX(200px);
+	    -o-transform: translateX(200px);
+	    -ms-transform: translateX(200px);
+	    transform: translateX(200px);
+	}
 }
+
 @media only screen and (max-width: 492px) {
 	#ticker-text ul li{font-size: 1.5em; letter-spacing: 0;}
         #logo-header { background-image: url('../img/logo-header-mobile.png'); width: 250px; height: 84px; margin-left: 0;}

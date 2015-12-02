@@ -1475,6 +1475,11 @@ table a:hover{
   display: none;
 }
 
+#lc-navbar-ul {
+    margin: 0;
+    padding: 0;
+}
+
 .container-fluid {
     z-index: 10;
     position: relative;
@@ -1497,11 +1502,11 @@ table a:hover{
     color: #444;
 }
 
-.container-fluid .row div {
+.container-fluid .row div.general-content {
     margin-left: 12%;
     margin-right: 12%;
-}
 
+}
 .general-content {
     background-color: #F1F1F1;
     opacity: 0.8;
@@ -1538,11 +1543,10 @@ table a:hover{
 /* inside profile edition */
 .settings-content {
     margin: 0 auto;
-    width: 80%;
+    width: 100%;
     background-color: #F1F1F1;
     opacity: 0.8;
-    padding: 10px;
-    min-height: 400px;
+    padding: 0 50px;
 }
 
 .settings-content a {
@@ -1553,3 +1557,116 @@ table a:hover{
     margin-right: 0 !important;
     margin-left: 0 !important;
 }
+
+.settings-nav {
+    left: 0;
+    max-width: 255px !important;
+    z-index: 1000;
+}
+
+.settings-nav ul.nav li {
+    margin: 12px;
+    height: 40px;
+    min-width: 200px;
+}
+
+.settings-nav ul.nav li span {
+    padding-left: 25px;
+    font-size: 16px;    
+}
+
+.notification-extreme {
+    margin-left: 0;
+}
+
+.settings-nav li a .icon {
+    float: left;
+    font-size: 30px;
+    margin-top: 0px;
+    text-align: center;
+}
+
+.settings-nav li a:hover {
+    color: #666;
+}
+
+.panel-body .pull-left {
+    padding-left: 10px;
+}
+
+.panel-body .alert {
+    background: #eee none repeat scroll 0 0;
+    color: #666;
+}
+
+.panel-info .panel-heading {
+    background: linear-gradient(to bottom, #eee, #ccc);
+}
+
+.btn-primary {
+    background: linear-gradient(to bottom, #ddd, #999);
+}
+
+.content.profile-edit .media .profile-picture {
+    max-width: 55px;
+}
+
+.content.profile-edit h2.personal-info {
+    font-size: 22px;
+    padding: 2px;
+}
+
+.form-group select, .form-group textarea, .form-group input {
+    height: 35px;
+}
+
+.file-upload input[type="file"] {
+    padding: 0;
+    margin: 10px;
+}
+
+#menu-topo ul {
+    padding-top: 10px;
+}
+
+#menu-topo .btn-default,
+#menu-topo .dropdown-toggle {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: medium none;
+    color: #666;
+    cursor: pointer;
+    display: inline-block;
+    float: none;
+    font-size: 23px;
+    height: 100%;
+    margin: 0;
+    outline: medium none;
+    padding: 9px 10px;
+    position: relative;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+#menu-topo .dropdown-menu {
+    width: 300px;
+    padding: 10px;
+}
+
+#menu-topo .dropdown-menu .media-body h5 {
+    color: #666;    
+}
+
+#menu-topo .tab-content {
+    background: #ddd;
+}
+
+#toggle-settings-nav .icon-bar {
+    background: #f00;
+}
+
+#toggle-settings-nav .icon-bar {
+    background-color: #666;
+}
+
+#menu-topo .navbar-toggle {
+    display: none;
+}    
