@@ -1537,6 +1537,7 @@ table a:hover{
 }
 
 #lc-navbar-ul li {
+    float: none;
     display: inline;
 }
 
@@ -1616,17 +1617,15 @@ table a:hover{
     padding: 2px;
 }
 
-.form-group select, .form-group textarea, .form-group input {
+#page-contact .form-group select, #page-contact .form-group input {
     height: 35px;
+    padding: 4px;
+    padding: 10px 12px 10px 12px !important;    
 }
 
 .file-upload input[type="file"] {
     padding: 0;
     margin: 10px;
-}
-
-#menu-topo ul {
-    padding-top: 10px;
 }
 
 #menu-topo .btn-default,
