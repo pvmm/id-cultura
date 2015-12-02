@@ -339,10 +339,12 @@ header {
 .navbar .nav {
   margin:0px;
   float:right !important;
+  position:relative;  
 }
 
 .navbar .nav > li {
-  position:relative;
+    position:relative;
+    float: left;
 }
 
 .navbar .nav > li > a {
