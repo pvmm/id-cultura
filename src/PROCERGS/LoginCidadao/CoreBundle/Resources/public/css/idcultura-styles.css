@@ -447,9 +447,9 @@ img {
 }
 
 #logo-header {
-  width: 430px;
-  height: 370px;
-  background-image: url('../img/logo-header.png')
+  width: 250px;
+  height: 84px;
+  background-image: url('../img/logo-header-mobile.png')
 }
 
 #background-footer {
@@ -1565,6 +1565,16 @@ table a:hover{
     left: 0;
     max-width: 255px !important;
     z-index: 1000;
+    height: 100%;
+}
+
+.settings-nav ul {
+    opacity: 0.7
+    background: -webkit-linear-gradient(#428789, #A8C8C8); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#428789, #A8C8C8); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#428789, #A8C8C8); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#428789, #A8C8C8); /* Standard syntax (must be last) */
+    
 }
 
 .settings-nav ul.nav li {
@@ -1575,7 +1585,7 @@ table a:hover{
 
 .settings-nav ul.nav li span {
     padding-left: 25px;
-    font-size: 16px;    
+    font-size: 15px;    
 }
 
 .notification-extreme {
@@ -1670,4 +1680,8 @@ table a:hover{
 
 #menu-topo .navbar-toggle {
     display: none;
-}    
+}
+
+.addresses {
+    padding-bottom: 30px;
+}

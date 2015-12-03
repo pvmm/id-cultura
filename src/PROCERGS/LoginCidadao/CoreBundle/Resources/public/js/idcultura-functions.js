@@ -44,6 +44,15 @@ jQuery(document).ready(function($) {
             $('#send').html('<i class="icon-user"></i> Criar conta ');
         } 
 
+    // aumenta pagina se menu for maior que conteudo
+    if($('.nav-pills').length) {
+	var y_menu = $('.nav-pills').height(),
+	    y_content = $('.settings-content').height();
+	
+	if (y_menu > y_content) {
+	    $('.settings-content').css('margin-bottom', y_menu - y_content);
+	}
+    }
 
 /* --------------------------------------------------------	
 	 External Links
