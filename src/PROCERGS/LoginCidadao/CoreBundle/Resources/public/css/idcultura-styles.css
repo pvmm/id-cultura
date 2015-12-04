@@ -1563,7 +1563,6 @@ table a:hover{
 
 .settings-nav {
     left: 0;
-    max-width: 255px !important;
     z-index: 1000;
     height: 100%;
 }
@@ -1574,6 +1573,7 @@ table a:hover{
     background: -o-linear-gradient(#428789, #A8C8C8); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(#428789, #A8C8C8); /* For Firefox 3.6 to 15 */
     background: linear-gradient(#428789, #A8C8C8); /* Standard syntax (must be last) */
+    padding: 2px;
     
 }
 
@@ -1584,12 +1584,8 @@ table a:hover{
 }
 
 .settings-nav ul.nav li span {
-    padding-left: 25px;
-    font-size: 15px;    
-}
-
-.notification-extreme {
-    margin-left: 0;
+    padding-left: 20px;
+    font-size: 14px;
 }
 
 .settings-nav li a .icon {
