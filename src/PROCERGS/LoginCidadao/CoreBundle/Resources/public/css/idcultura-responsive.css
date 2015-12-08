@@ -77,6 +77,8 @@
         #logo-header { background-image: url('../img/logo-header-mobile.png'); width: 250px; height: 84px;margin-left: 0; }
         #background-footer { background-image: url('../img/background-footer-250.png'); width: 250px; height: 200px;}	
         #devices {margin-top: 80px;}
+	[class*="span"], .uneditable-input[class*="span"], .row-fluid [class*="span"] { width: 95%; }
+	.redes-sociais { margin-left: 2%; margin-right: 2%;}
 	
 	/*menu retratil*/
 	#menu-topo .navbar-toggle {  display: inline-block }

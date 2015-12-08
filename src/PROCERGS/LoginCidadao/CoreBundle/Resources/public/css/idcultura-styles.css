@@ -292,7 +292,23 @@ header {
 }
 
 .nav, .redes-sociais, .redes-sociais a, .redes-sociais a img {
-  z-index: 10;	
+    z-index: 10;
+}
+
+.redes-sociais a img {
+    margin-top: 13px;
+    margin-left: 13px;
+}
+
+.redes-sociais a:hover img {
+    width: 115px;
+    height: 115px;
+    position: relative;
+    margin-top: -12px;
+    margin-left: -12px;
+    top: 12px;
+    left: 12px;
+    pointer: cursor;
 }
 
   /* --------------------------------------------------------	*/
@@ -880,6 +896,15 @@ table a:hover{
 .form-main textarea {
   height:200px;
   resize:none;
+}
+
+.form-main .form-control::-moz-placeholder {
+    color: #979797;   
+}
+								
+
+#page-contact .general-content {
+    opacity: 1;
 }
 
 .error {
@@ -1594,7 +1619,7 @@ table a:hover{
 
 .settings-nav li a .icon {
     float: left;
-    font-size: 30px;
+    font-size: 28px;
     margin-top: 0px;
     text-align: center;
 }
@@ -1685,3 +1710,8 @@ table a:hover{
 .addresses {
     padding-bottom: 30px;
 }
+
+#content2 .btn {
+    background: #edb636 none repeat scroll 0 0;
+}
+
