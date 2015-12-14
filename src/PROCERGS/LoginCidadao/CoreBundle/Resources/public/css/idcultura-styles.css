@@ -1563,10 +1563,6 @@ table a:hover{
     background-color: transparent;
 }
 
-#page-contact label {
-    display: none;
-}
-
 #lc-navbar-ul li {
     float: none;
     display: inline;
@@ -1655,9 +1651,14 @@ table a:hover{
 }
 
 #page-contact .form-group select, #page-contact .form-group input {
-    height: 35px;
+    height: 37px;
     padding: 4px;
     padding: 10px 12px 10px 12px !important;    
+}
+
+.recaptcha-widget .recaptcha-main input[type="text"] {
+    height: 37px;
+    padding: 10px 12px !important;
 }
 
 .file-upload input[type="file"] {
