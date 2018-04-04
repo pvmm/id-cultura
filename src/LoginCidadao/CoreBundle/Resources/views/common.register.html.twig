@@ -25,6 +25,10 @@
         {{ form_row(form.surname) }}
     {% endif %}
 
+    {% if form.stageName is defined %}
+        {{ form_row(form.stageName) }}
+    {% endif %}
+
     {% if form.cpf is defined %}
         {{ form_row(form.cpf) }}
     {% endif %}

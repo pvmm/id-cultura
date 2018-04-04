@@ -28,6 +28,7 @@ form.firstName.example: Fulano
 form.surname: Sobrenome
 form.surname.example: de Tal
 form.birthdate: 'Data de nascimento'
+form.stageName: Nome artístico
 form.cep: CEP
 form.cpf: CPF
 form.city: Cidade

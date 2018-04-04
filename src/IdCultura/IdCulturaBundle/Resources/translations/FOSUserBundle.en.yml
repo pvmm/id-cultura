@@ -26,6 +26,7 @@ form.firstName.example: John
 form.surname: Surname
 form.surname.example: Doe
 form.birthdate: Birthday
+form.stageName: Stage name
 form.cep: Postal Code
 form.cpf: CPF
 form.city: City

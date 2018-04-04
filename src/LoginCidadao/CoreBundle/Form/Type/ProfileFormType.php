@@ -32,6 +32,9 @@ class ProfileFormType extends BaseType
             ->add('surname',
                 'Symfony\Component\Form\Extension\Core\Type\TextType',
                 array('label' => 'form.surname', 'translation_domain' => 'FOSUserBundle'))
+            ->add('stageName',
+                'Symfony\Component\Form\Extension\Core\Type\TextType',
+                array('label' => 'form.stageName', 'translation_domain' => 'FOSUserBundle'))
             ->add('birthdate',
                 'Symfony\Component\Form\Extension\Core\Type\BirthdayType',
                 array(
