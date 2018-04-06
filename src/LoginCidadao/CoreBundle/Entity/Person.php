@@ -82,7 +82,6 @@ class Person extends BaseUser implements PersonInterface, TwoFactorInterface, Ba
      * @Assert\Length(
      *     min=1,
      *     max="255")
-     * @JMS\Since("1.0")
      */
     protected $stageName;
 
