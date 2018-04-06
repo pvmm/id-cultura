@@ -3,9 +3,11 @@
 $dependencies = <<SCRIPT
     # Instalando pacotes do php.
     # Observe que aqui vamos optar por usar o postgres, mas e possivel usar mysql sem problemas
-    sudo apt-get install -y php5 php5-curl php5-intl php5-pgsql php5-memcache
+    sudo apt-get update
 
-    sudo apt-get install -y memcached php5-memcached
+    sudo apt-get install -y php5 php5-curl php5-intl php5-pgsql
+
+    sudo apt-get install -y memcached php5-memcache php5-memcached
 
     sudo apt-get install -y postgresql git
 
