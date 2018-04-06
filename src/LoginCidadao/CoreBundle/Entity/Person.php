@@ -78,6 +78,16 @@ class Person extends BaseUser implements PersonInterface, TwoFactorInterface, Ba
 
     /**
      * @JMS\Expose
+     * @ORM\Column(type="string", nullable=true)
+     * @Assert\Length(
+     *     min=1,
+     *     max="255")
+     * @JMS\Since("1.0")
+     */
+    protected $stageName;
+
+    /**
+     * @JMS\Expose
      * @JMS\Groups({"username","preferred_username"})
      * @Assert\NotBlank
      * @Assert\Length(
@@ -427,6 +437,18 @@ class Person extends BaseUser implements PersonInterface, TwoFactorInterface, Ba
     public function setSurname($suname)
     {
         $this->surname = $suname;
+
+        return $this;
+    }
+
+    public function getStageName()
+    {
+        return $this->stageName;
+    }
+
+    public function setStageName($stageName)
+    {
+        $this->stageName = $stageName;
 
         return $this;
     }
