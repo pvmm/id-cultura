@@ -27,6 +27,10 @@ interface PersonInterface extends EncoderAwareInterface, UserInterface
 
     public function setSurname($suname);
 
+    public function getStageName();
+
+    public function setStageName($stageName);
+
     public function getBirthdate();
 
     public function setBirthdate($birthdate);

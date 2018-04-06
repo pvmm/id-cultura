@@ -107,7 +107,7 @@ class PersonRepository extends EntityRepository
     public function getUserSearchQuery($query)
     {
         return $this->createQueryBuilder('p')
-                ->where('p.cpf LIKE :query OR p.username LIKE :query OR p.email LIKE :query OR p.firstName LIKE :query OR p.surname LIKE :query')
+                ->where('p.cpf LIKE :query OR p.username LIKE :query OR p.email LIKE :query OR p.firstName LIKE :query OR p.surname LIKE :query OR p.stageName LIKE :query')
                 ->setParameter('query', '%'.addcslashes($query, '\\%_').'%')
                 ->addOrderBy('p.id', 'DESC');
     }
